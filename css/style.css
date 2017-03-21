@@ -89,6 +89,22 @@ header ul li {
 #header-bottom-nav-right li {
     padding-left: 16px;
 }
+/*End of header bottom nav bar*/
+
 #logocont {
     background-color: #464547;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
+#logocont-left  {
+    display: flex;
+    align-items: center;
+}
+#logocont-left h1 {
+    color: #7ae6f7;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
