@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
 /*Upper sharepoint bar*/
 .sharepoint-cont {
     background-color: #39c2d7;
@@ -38,17 +41,23 @@
 #sharepoint-user a{
     color: #464547;
 }
-.sharepoint-cont ul li {
+header ul li {
     display: inline-block;
     margin: 0 8px;
 }
 .sharepoint-cont a {
     color: #fff;
     text-decoration: none;
-    font-family: "Source Sans Pro", sans-serif;
 }
 
 /*End of Upper sharepoint bar*/
+/*Header bottom nav bar*/
+#header-bottom-nav-bar {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #logocont {
     background-color: #464547;
 }
