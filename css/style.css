@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding-left: 20px;
 }
 #sharepoint-left-cont {
     display: flex;
@@ -20,6 +20,23 @@
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     margin-left: 10px;
+}
+#sharepoint-right-cont {
+    display: flex;
+    align-items: center;
+}
+#sharepoint-nav {
+    padding-right: 30px;
+}
+#sharepoint-user {
+    background-color: #eee;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+#sharepoint-user a{
+    color: #464547;
 }
 .sharepoint-cont ul li {
     display: inline-block;
