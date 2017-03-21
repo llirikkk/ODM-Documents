@@ -4,6 +4,10 @@
 }
 body {
     font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+}
+a {
+    text-decoration: none;
 }
 /*Upper sharepoint bar*/
 .sharepoint-cont {
@@ -33,7 +37,7 @@ body {
 }
 #sharepoint-user {
     background-color: #eee;
-    height: 25px;
+    height: 29px;
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -41,13 +45,15 @@ body {
 #sharepoint-user a{
     color: #464547;
 }
-header ul li {
-    display: inline-block;
+.sharepoint-cont ul li {
     margin: 0 8px;
+}
+header ul li {
+    display: block;
+    float: left;
 }
 .sharepoint-cont a {
     color: #fff;
-    text-decoration: none;
 }
 
 /*End of Upper sharepoint bar*/
@@ -57,6 +63,31 @@ header ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding:5px 20px;
+    text-transform: uppercase;
+}
+#header-bottom-nav-left {
+    display: flex;
+    align-items: center;
+}
+#header-bottom-nav-left li {
+    padding: 2px 8px;
+}
+#header-bottom-nav-left .active {
+    background-color: #39c2d7;
+
+}
+#header-bottom-nav-left .active a {
+    color: #fff;
+}
+#header-bottom-nav-left a {
+    color: #464547;
+}
+#header-bottom-nav-right a {
+    color: #999;
+}
+#header-bottom-nav-right li {
+    padding-left: 16px;
 }
 #logocont {
     background-color: #464547;
