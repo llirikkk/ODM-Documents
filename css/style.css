@@ -19,7 +19,7 @@
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
     font-size: 16px;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 #sharepoint-right-cont {
     display: flex;
@@ -40,7 +40,7 @@
 }
 .sharepoint-cont ul li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 8px;
 }
 .sharepoint-cont a {
     color: #fff;
