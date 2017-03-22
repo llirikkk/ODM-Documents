@@ -10,7 +10,7 @@ a {
     text-decoration: none;
 }
 /*Upper sharepoint bar*/
-.sharepoint-cont {
+.sharepoint-bar {
     background-color: #39c2d7;
     color: #fff;
     display: flex;
@@ -18,41 +18,41 @@ a {
     justify-content: space-between;
     padding-left: 20px;
 }
-#sharepoint-left-cont {
+.sharepoint-bar__logo {
     display: flex;
     align-items: center;
 }
-#sharepoint-logo {
+.sharepoint-bar__logo-img {
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     margin-left: 8px;
 }
-#sharepoint-right-cont {
+.sharepoint-bar__nav {
     display: flex;
     align-items: center;
 }
-#sharepoint-nav {
+.sharepoint-bar__nav-links {
     padding-right: 30px;
 }
-#sharepoint-user {
+.sharepoint-bar__nav-user {
     background-color: #eee;
     height: 29px;
     display: flex;
     align-items: center;
     padding: 0 10px;
 }
-#sharepoint-user a{
+#sharepoint-bar__nav-user a{
     color: #464547;
 }
-.sharepoint-cont ul li {
+.sharepoint-bar ul li {
     margin: 0 8px;
 }
 header ul li {
     display: block;
     float: left;
 }
-.sharepoint-cont a {
+.sharepoint-bar a {
     color: #fff;
 }
 
