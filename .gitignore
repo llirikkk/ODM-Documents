@@ -1,4 +1,4 @@
 .idea
 node_modules
-/images/src/
-/font-awesome/
+images/src/
+font-awesome/
