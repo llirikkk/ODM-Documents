@@ -119,16 +119,34 @@ header ul li {
     font-family: "Oswald", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
-    padding-bottom: 19px;
+    /*padding: 10px 0;*/
+
     float: left;
+    box-sizing: border-box;
 }
 .menu a {
     color: #fff;
 }
 .menu li {
     list-style: none;
+    /*padding-left: 29px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+}
+.menu a {
+    display: block;
     padding-left: 29px;
-    padding-top: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu__item_active {
+    background-color: #31a5b7;
+}
+.menu__submenu {
+    background-color: #e1f6f9;
+}
+.menu__submenu a {
+    color: #7b7b7b;
 }
 /*End of menu*/
 
