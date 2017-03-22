@@ -90,12 +90,13 @@ header ul li {
     padding-left: 16px;
 }
 /*End of header bottom nav bar*/
-
+/*Logo bar*/
 .logo-bar {
     background-color: #464547;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
+    align-items: center;
 }
 .logo-bar__img  {
     display: flex;
@@ -107,4 +108,31 @@ header ul li {
     font-size: 20px;
     margin-left: 20px;
 }
+.logo-bar__search {
+    color: #ccc;
+    font-size: 22px;
+}
+/*Menu*/
+.menu {
+    background-color: #39c2d7;
+    width: 250px;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 19px;
+    float: left;
+}
+.menu a {
+    color: #fff;
+}
+.menu li {
+    list-style: none;
+    padding-left: 29px;
+    padding-top: 19px;
+}
+/*End of menu*/
 
+/*Main section*/
+.main-section {
+    margin-left: 265px;
+}
