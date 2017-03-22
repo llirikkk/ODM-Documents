@@ -139,8 +139,21 @@ header ul li {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.menu a > span {
+    margin-right: 21px;
+}
 .menu__item_active {
     background-color: #31a5b7;
+}
+.menu__item_has-submenu > a {
+    position: relative;
+}
+.menu__item_has-submenu > a::after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 30%;
+    right: 25px;
 }
 .menu__submenu {
     background-color: #e1f6f9;
