@@ -163,6 +163,24 @@ header ul li {
 }
 /*End of menu*/
 
+/*Main section Header*/
+.main-section > header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.document-menu li {
+    height: 35px;
+    width: 190px;
+}
+
+.document-menu__new-doc {
+    background-color: #a3c644;
+}
+.document-menu__attach-doc {
+    background-color: #ecc134;
+}
+
 /*Main section*/
 .main-section {
     margin-left: 265px;
