@@ -4,7 +4,7 @@
 }
 body {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 a {
     text-decoration: none;
@@ -168,11 +168,23 @@ header ul li {
     display: flex;
     justify-content: space-between;
 }
-
 .document-menu li {
+    margin-right: 5px;
+}
+.document-menu li a {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 35px;
     width: 190px;
+    padding: 0 19px;
+    box-sizing: border-box;
 }
+.document-menu__attach-doc .fa-paperclip {
+    font-size: 20px;
+}
+
 
 .document-menu__new-doc {
     background-color: #a3c644;
@@ -183,5 +195,6 @@ header ul li {
 
 /*Main section*/
 .main-section {
+    margin-top: 15px;
     margin-left: 265px;
 }
