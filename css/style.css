@@ -164,6 +164,7 @@ header ul li {
 /*End of menu*/
 
 /*Main section Header*/
+/*Section Buttons*/
 .main-section > header {
     display: flex;
     justify-content: space-between;
@@ -192,9 +193,33 @@ header ul li {
 .document-menu__attach-doc {
     background-color: #ecc134;
 }
+/*End of Section Buttons*/
+/*Section Search*/
+.section-search {
+    position: relative;
+}
+.section-search__buttons {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    display: flex;
+    align-items: center;
+    color: #acacac;
+    font-size: 14px;
+}
+.section-search__buttons .fa-search {
+    margin: 0 5px;
+    font-size: 17px;
+}
+input[type=search]{
+    width: 390px;
+    padding: 12px 6px 12px 12px;
+    height: 35px;
+}
 
 /*Main section*/
 .main-section {
     margin-top: 15px;
+    margin-right: 15px;
     margin-left: 265px;
 }
