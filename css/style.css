@@ -292,7 +292,7 @@ input[type=search]{
     width: 100%;
     margin-right: 0;
     table-layout: fixed;
-    min-width: 1200px;
+    min-width: 1238px;
 }
 .tab-content table tr:nth-child(2n) {
     background-color: #f1f1f1;
