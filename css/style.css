@@ -275,6 +275,7 @@ input[type=search]{
 }
 .tab-content th {
     padding-top: 60px;
+    vertical-align: bottom;
 }
 .tab-content th:last-child {
     width: 60px;
