@@ -248,6 +248,9 @@ input[type=search]{
     margin-right: 15px;
     margin-left: 265px;
 }
+.main-section .tabs {
+    border: 1px solid #d3d3d3;
+}
 .main-section h1 {
     font-size: 25px;
     line-height: 25px;
@@ -257,14 +260,33 @@ input[type=search]{
     margin-top: 14px;
     margin-bottom: 15px;
 }
+.tabs {
+    position: relative;
+}
+.tab-content {
+    overflow: auto;
+}
 .tab-content th, td {
-    padding: 12px 22px;
+    padding: 12px 21px;
     text-align: left;
 }
+.tab-content th {
+    padding-top: 60px;
+}
 
+
+.outgoing-documents {
+
+}
+.tab-content h1 {
+    position: absolute;
+    left: 21px;
+}
 .tab-content table {
     border-collapse: collapse;
-    margin-bottom: 34px;
+    margin-bottom: 20px;
+    width: 100%;
+
 }
 .tab-content table tr:nth-child(2n) {
     background-color: #f1f1f1;
