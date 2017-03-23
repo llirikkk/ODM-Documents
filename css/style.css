@@ -267,7 +267,7 @@ input[type=search]{
     overflow: auto;
 }
 .tab-content th, td {
-    padding: 12px 21px;
+    padding: 12px 22px;
     text-align: left;
 }
 .tab-content td {
@@ -276,6 +276,9 @@ input[type=search]{
 .tab-content th {
     padding-top: 60px;
     vertical-align: bottom;
+}
+.tab-content th:first-child {
+    width: 60px;
 }
 .tab-content th:last-child {
     width: 60px;
@@ -328,7 +331,11 @@ input[type=search]{
     background-color: #eb6a5a;
 }
 .th-sorted {
+    position: relative;
+}
+.th-sorted a {
     color: #36c3d8;
+    display: inline-block;
     position: relative;
 }
 .th-sorted::after {
@@ -339,4 +346,12 @@ input[type=search]{
     width: 90%;
     bottom: 0;
     left: 15px;
+}
+.th-sorted_down a::after {
+    content: "\f107";
+    font-family: FontAwesome;
+    position: absolute;
+    right: -12px;
+    top: 30%;
+    font-size: 15px;
 }
