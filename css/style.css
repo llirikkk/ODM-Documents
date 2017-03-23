@@ -276,6 +276,12 @@ input[type=search]{
 .tab-content th {
     padding-top: 60px;
 }
+.tab-content th:last-child {
+    width: 60px;
+}
+.tab-content th:nth-last-child(2){
+    width: 60px;
+}
 .tab-content h1 {
     position: absolute;
     left: 21px;
@@ -290,4 +296,33 @@ input[type=search]{
 }
 .tab-content table tr:nth-child(2n) {
     background-color: #f1f1f1;
+}
+.table-mark {
+    color: #fff;
+    display: inline-block;
+    /*padding: 4px 0px;*/
+    width: 65px;
+    line-height: 20px;
+    text-align: center;
+}
+.table-mark_signed {
+    background-color: #a3c644;
+}
+.table-mark_awaits {
+    background-color: #ecc134;
+}
+.table-mark_cancelled {
+    background-color: #b32746;
+}
+.table-mark_approved {
+    background-color: #39b7ac;
+}
+.table-mark_held {
+    background-color: #999999;
+}
+.table-mark_changed {
+    background-color: #937ebd;
+}
+.table-mark_deleted {
+    background-color: #eb6a5a;
 }
