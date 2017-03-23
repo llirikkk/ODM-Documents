@@ -168,6 +168,7 @@ header ul li {
 .main-section > header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 .document-menu li {
     margin-right: 5px;
@@ -216,7 +217,27 @@ input[type=search]{
     padding: 12px 6px 12px 12px;
     height: 35px;
 }
-
+/*End of Section search*/
+/*Tabs section*/
+.tab-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    background-color: #666666;
+}
+.tab-links a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    padding: 9px 20px;
+    display: block;
+}
+.tab-links span {
+    margin-right: 10px;
+}
+/*End of Tabs section*/
 /*Main section*/
 .main-section {
     margin-top: 15px;
