@@ -127,6 +127,9 @@ header ul li {
 .menu a {
     color: #fff;
 }
+.menu > li {
+    border-bottom: 1px solid #5ecbdc;
+}
 .menu li {
     list-style: none;
     /*padding-left: 29px;*/
@@ -145,10 +148,13 @@ header ul li {
 .menu__item_active {
     background-color: #31a5b7;
 }
-.menu__item_has-submenu > a {
+#menu__item_has-submenu {
+    border-bottom: none;
+}
+#menu__item_has-submenu > a {
     position: relative;
 }
-.menu__item_has-submenu > a::after {
+#menu__item_has-submenu > a::after {
     content: "\f0d7";
     font-family: FontAwesome;
     position: absolute;
