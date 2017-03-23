@@ -224,7 +224,7 @@ input[type=search]{
     align-items: center;
     justify-content: flex-start;
     list-style: none;
-    background-color: #666666;
+    background-color: #666;
 }
 .tab-links a {
     color: #fff;
@@ -236,6 +236,10 @@ input[type=search]{
 }
 .tab-links span {
     margin-right: 10px;
+}
+.tab-links__item_active > a {
+    background-color: #fff;
+    color: #666;
 }
 /*End of Tabs section*/
 /*Main section*/
