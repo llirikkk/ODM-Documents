@@ -259,7 +259,9 @@ input[type=search]{
 }
 .tab-content th, td {
     padding: 12px 22px;
+    text-align: left;
 }
+
 .tab-content table {
     border-collapse: collapse;
     margin-bottom: 34px;
