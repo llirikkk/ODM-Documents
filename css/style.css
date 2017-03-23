@@ -270,13 +270,11 @@ input[type=search]{
     padding: 12px 21px;
     text-align: left;
 }
+.tab-content td {
+    white-space: nowrap;
+}
 .tab-content th {
     padding-top: 60px;
-}
-
-
-.outgoing-documents {
-
 }
 .tab-content h1 {
     position: absolute;
@@ -286,7 +284,9 @@ input[type=search]{
     border-collapse: collapse;
     margin-bottom: 20px;
     width: 100%;
-
+    margin-right: 0;
+    table-layout: fixed;
+    min-width: 1200px;
 }
 .tab-content table tr:nth-child(2n) {
     background-color: #f1f1f1;
