@@ -148,22 +148,22 @@ aside {
 .menu a > span {
     margin-right: 21px;
 }
-.menu__item_active {
-    background-color: #31a5b7;
-}
+/*.menu__item_active {*/
+    /*background-color: #31a5b7;*/
+/*}*/
 #menu__item_has-submenu {
     border-bottom: none;
 }
 #menu__item_has-submenu > a {
     position: relative;
 }
-#menu__item_has-submenu > a::after {
-    content: "\f0d7";
-    font-family: FontAwesome;
-    position: absolute;
-    top: 30%;
-    right: 25px;
-}
+/*#menu__item_has-submenu > a::after {*/
+    /*content: "\f0d7";*/
+    /*font-family: FontAwesome;*/
+    /*position: absolute;*/
+    /*top: 30%;*/
+    /*right: 25px;*/
+/*}*/
 .menu__submenu {
     background-color: #e1f6f9;
 }
@@ -396,8 +396,20 @@ input[type=checkbox]{
     top: 10px;
     left: 10px;
 }
-input[type=checkbox]:checked ~ .menu__submenu{
+.menu__submenu{
+
     display: none;
+}
+input[type=checkbox]:checked ~ .menu__submenu{
+    display: block;
+    transition-duration: 1s;
+}
+input[type=checkbox]:checked ~ label{
+    background-color: #31a5b7;
+    border-bottom: 1px solid #5ecbdc;;
+}
+input[type=checkbox]:checked ~ label::after {
+    transform: rotate(180deg);
 }
 .menu label {
     color: #fff;
@@ -405,7 +417,16 @@ input[type=checkbox]:checked ~ .menu__submenu{
     padding-left: 29px;
     padding-top: 10px;
     padding-bottom: 10px;
+    cursor: pointer;
+    position: relative;
 }
 .menu label span {
     margin-right: 22px;
+}
+.menu__item_submenu::after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 30%;
+    right: 25px;
 }
