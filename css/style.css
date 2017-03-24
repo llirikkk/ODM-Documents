@@ -399,3 +399,13 @@ input[type=checkbox]{
 input[type=checkbox]:checked ~ .menu__submenu{
     display: none;
 }
+.menu label {
+    color: #fff;
+    display: block;
+    padding-left: 29px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu label span {
+    margin-right: 22px;
+}
