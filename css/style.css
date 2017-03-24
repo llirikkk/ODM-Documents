@@ -390,3 +390,12 @@ footer ul li:last-child {
 footer a {
     color: #cdcdcd;
 }
+
+input[type=checkbox]{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+input[type=checkbox]:checked ~ .menu__submenu{
+    display: none;
+}
