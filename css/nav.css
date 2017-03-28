@@ -37,6 +37,32 @@ aside {
 /*.menu__item_active {*/
 /*background-color: #31a5b7;*/
 /*}*/
+
+.menu a:before {
+    font-family: FontAwesome;
+    font-size: 19px;
+    width: 21px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.menu__item-home:before {
+    content: "\f015";
+}
+.menu__item-documents:before {
+    content: "\f0f6";
+}
+.menu__item-calendar:before {
+    content: "\f073";
+}
+.menu__item-archive:before {
+    content: "\f187";
+}
+.menu__item-nomenclature:before {
+    content: "\f0ca";
+}
+.menu__item-organizations:before {
+    content: "\f0f2";
+}
 #menu__item_has-submenu {
     border-bottom: none;
 }
@@ -83,9 +109,9 @@ input[type=checkbox]:checked ~ label::after {
 .menu label {
     color: #fff;
     display: block;
-    padding-left: 29px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*padding-left: 29px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
     cursor: pointer;
     position: relative;
     border-bottom: 1px solid #5ecbdc;
