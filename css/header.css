@@ -27,13 +27,27 @@
 .sharepoint-bar__nav-links {
     padding-right: 30px;
 }
+
+/*noinspection CssNoGenericFontName*/
 .sharepoint-bar__nav-user {
     background-color: #eee;
     height: 29px;
     display: flex;
     align-items: center;
     padding: 0 10px;
+    font-family: FontAwesome;
 }
+.sharepoint-bar__user-profile {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+/*noinspection CssNoGenericFontName*/
+.sharepoint-bar__user-profile:after {
+    font-family: FontAwesome;
+    content: '\f0d7'; /*caret-down*/
+    margin-left: 12px;
+}
+
 .sharepoint-bar__nav-user a{
     color: #464547;
 }
