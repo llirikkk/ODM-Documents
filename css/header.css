@@ -88,6 +88,26 @@
 .header-bottom-nav-bar__right li {
     padding-left: 16px;
 }
+
+/*noinspection CssNoGenericFontName*/
+.header-bottom-nav-bar__right a:before {
+    font-family: FontAwesome;
+    margin-right: 4px;
+}
+.nav-bar__item-share:before {
+    content: '\f1e0';
+}
+.nav-bar__item-follow:before {
+    content: '\f006';
+}
+.nav-bar__item-edit:before {
+    content: '\f040';
+}
+
+/*noinspection CssNoGenericFontName*/
+.nav-bar__item-expand {
+    font-family: FontAwesome;
+}
 /*End of header bottom nav bar*/
 /*Logo bar*/
 .logo-bar {
