@@ -93,6 +93,8 @@ input[type=checkbox]:checked ~ label::after {
 .menu label span {
     margin-right: 22px;
 }
+
+/*noinspection CssNoGenericFontName*/
 .menu__item_submenu::after {
     content: "\f0d7";
     font-family: FontAwesome;

@@ -1,6 +1,7 @@
 @import "header.css";
 @import "nav.css";
 @import "main-section.css";
+@import "footer.css";
 
 * {
     margin: 0;
