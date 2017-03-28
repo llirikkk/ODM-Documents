@@ -15,13 +15,13 @@ a {
     text-decoration: none;
 }
 .main-section {
-    min-width: 585px;
+    min-width: 1130px;
 }
 body > header {
-    min-width: 850px;
+    min-width: 1410px;
 }
 body > footer {
-    min-width: 850px;
+    min-width: 1360px;
 }
 header ul li {
     display: block;
