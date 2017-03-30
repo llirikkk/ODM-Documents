@@ -14,16 +14,25 @@ body {
 a {
     text-decoration: none;
 }
-.main-section {
-    min-width: 585px;
-}
-body > header {
-    min-width: 850px;
-}
-body > footer {
-    min-width: 850px;
-}
+/*.main-section {*/
+    /*min-width: 585px;*/
+/*}*/
+/*body > header {*/
+    /*min-width: 850px;*/
+/*}*/
+/*body > footer {*/
+    /*min-width: 850px;*/
+/*}*/
 header ul li {
     display: block;
     float: left;
+}
+
+@media screen and (max-width: 850px) {
+    .menu {
+        display: none;
+    }
+    .main-section {
+        margin-left: 15px;
+    }
 }

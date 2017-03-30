@@ -1,3 +1,8 @@
+.main-section {
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-left: 265px;
+}
 /*Main section Header*/
 /*Section Buttons*/
 .main-section > header {
@@ -111,11 +116,7 @@ input[type=search]{
 }
 /*End of Tabs section*/
 /*Main section*/
-.main-section {
-    margin-top: 15px;
-    margin-right: 15px;
-    margin-left: 265px;
-}
+
 .main-section .tabs {
     border: 1px solid #d3d3d3;
 }
