@@ -127,7 +127,12 @@ input[type=search]{
     text-transform: uppercase;
     margin-top: 14px;
     margin-bottom: 15px;
-    margin-left: 21px;
+}
+.tabs {
+    position: relative;
+}
+.tab-content {
+    overflow: auto;
 }
 .tab-content th, td {
     padding: 12px 22px;
@@ -135,6 +140,10 @@ input[type=search]{
 }
 .tab-content td {
     white-space: nowrap;
+}
+.tab-content th {
+    padding-top: 60px;
+    vertical-align: bottom;
 }
 .tab-content th:first-child {
     width: 60px;
@@ -145,14 +154,17 @@ input[type=search]{
 .tab-content th:nth-last-child(2){
     width: 60px;
 }
-
+.tab-content h1 {
+    position: absolute;
+    left: 21px;
+}
 .tab-content table {
     border-collapse: collapse;
     margin-bottom: 20px;
     width: 100%;
-    /*margin-right: 0;*/
+    margin-right: 0;
     table-layout: fixed;
-    /*min-width: 1238px;*/
+    min-width: 1238px;
 }
 .tab-content table tr:nth-child(2n) {
     background-color: #f1f1f1;
