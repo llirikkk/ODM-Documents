@@ -117,11 +117,11 @@
     padding: 10px 20px;
     align-items: center;
 }
-.logo-bar__img  {
+.logo-bar__left  {
     display: flex;
     align-items: center;
 }
-.logo-bar__img h1 {
+.logo-bar__left h1 {
     color: #7ae6f7;
     font-family: "Oswald", sans-serif;
     font-size: 20px;

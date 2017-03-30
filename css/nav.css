@@ -3,7 +3,7 @@ aside {
     height: 100%;
 }
 .menu {
-    background-color: #39c2d7;
+    /*background-color: #39c2d7;*/
     width: 250px;
     font-family: "Oswald", sans-serif;
     font-size: 16px;
@@ -17,6 +17,7 @@ aside {
     color: #fff;
 }
 .menu > li {
+    background-color: #39c2d7;
     border-bottom: 1px solid #5ecbdc;
 }
 .menu li {
@@ -142,3 +143,8 @@ input[type=checkbox]:checked ~ label::after {
 }
 
 /*End of Dropdown menu*/
+
+/*Mobile nav*/
+.mobile_nav {
+    display: none;
+}
