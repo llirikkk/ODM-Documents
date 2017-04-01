@@ -70,6 +70,14 @@ header ul li {
         padding: 0;
     }
 
+    /*noinspection CssNoGenericFontName*/
+    .sharepoint-bar__logo::after {
+        content: '\f107';
+        font-family: FontAwesome;
+        font-size: 25px;
+        margin-left: 15px;
+    }
+
     .mobile_nav {
         top: 25px;
     }
