@@ -61,3 +61,57 @@ header ul li {
         margin-left: 35px;
     }
 }
+@media screen and (max-width: 600px) {
+    .incoming-documents thead {
+        display: none;
+    }
+    .incoming-documents h1 {
+        position: static;
+        margin-left: 22px;
+    }
+    .incoming-documents tbody td {
+        display: block;
+    }
+    .incoming-documents tbody td {
+        display: block;
+        padding: 5px 22px;
+    }
+    .incoming-documents tbody td:before {
+        font-weight: bold;
+        display: inline-block;
+        width: 140px;
+    }
+    .incoming-documents td:nth-child(1):before {
+        content: 'Incoming date:';
+    }
+    .incoming-documents td:nth-child(2):before {
+        content: 'Incoming number:';
+    }
+    .incoming-documents td:nth-child(3):before {
+        content: 'External Doc. Index:';
+    }
+    .incoming-documents td:nth-child(4):before {
+        content: 'Type:';
+    }
+    .incoming-documents td:nth-child(5):before {
+        content: 'Theme:';
+    }
+    .incoming-documents td:nth-child(6):before {
+        content: 'Sent From:';
+    }
+    .incoming-documents td:nth-child(7):before {
+        content: 'Sent To:';
+    }
+    .incoming-documents td:nth-child(8):before {
+        content: 'Executor:';
+    }
+    .incoming-documents td:nth-child(9):before {
+        content: 'Execution Date:';
+    }
+    .incoming-documents td:nth-child(10):before {
+        content: 'Execution Mark:';
+    }
+    .incoming-documents td:nth-child(11):before {
+        content: 'Actions:';
+    }
+}
