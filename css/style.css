@@ -62,14 +62,19 @@ header ul li {
     }
 }
 @media screen and (max-width: 600px) {
-    .sharepoint-bar__nav-links, .header-bottom-nav-bar {
+    .sharepoint-bar__nav, .header-bottom-nav-bar {
         display: none;
     }
+    .sharepoint-bar {
+        justify-content: center;
+        padding: 0;
+    }
+
     .mobile_nav {
-        top: 29px;
+        top: 25px;
     }
     .menu {
-        top: 99px;
+        top: 95px;
         padding: 0;
     }
     .document-menu li a{
