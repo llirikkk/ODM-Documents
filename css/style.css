@@ -28,7 +28,7 @@ header ul li {
     float: left;
 }
 
-@media screen and (max-width: 1076px) {
+@media screen and (max-width: 1395px) {
     .menu {
         display: none;
     }
@@ -62,22 +62,51 @@ header ul li {
     }
 }
 @media screen and (max-width: 630px) {
-    .sharepoint-bar__nav, .header-bottom-nav-bar {
-        display: none;
+    .sharepoint-bar-wrap {
+        position: absolute;
+        width: 100%;
+        background-color: #39c2d7;
+        height: 26px;
+        overflow: hidden;
+        z-index: 1050;
+        transition: height 0.3s ease;
+    }
+    .sharepoint-bar-wrap:hover {
+        height: 200px;
+    }
+    .sharepoint-bar-wrap:hover .sharepoint-bar__logo::after {
+        transform: rotate(180deg);
+    }
+    .sharepoint-bar, .header-bottom-nav-bar {
+        position: absolute;
     }
     .sharepoint-bar {
-        justify-content: center;
-        padding: 0;
+        width: 100%;
+        padding-left: 0;
     }
-
+    .sharepoint-bar__logo {
+        width: 100%;
+        justify-content: center;
+    }
+    .sharepoint-bar__nav {
+        position: absolute;
+        top: 50px;
+    }
+    .header-bottom-nav-bar {
+        top: 100px;
+    }
     /*noinspection CssNoGenericFontName*/
     .sharepoint-bar__logo::after {
         content: '\f107';
         font-family: FontAwesome;
         font-size: 25px;
         margin-left: 15px;
+        transition-duration: 0.3s;
     }
+    .logo-bar {
 
+        padding-top: 35px;
+    }
     .mobile_nav {
         top: 25px;
     }
