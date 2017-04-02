@@ -118,6 +118,7 @@ header ul li {
     .sharepoint-bar {
         width: 100%;
         padding-left: 0;
+        display: block;
     }
     .sharepoint-bar__logo {
         width: 100%;
@@ -127,17 +128,21 @@ header ul li {
         position: absolute;
         top: 40px;
         width: 100%;
+        display: flex;
         justify-content: center;
     }
     .sharepoint-bar__nav-user {
-        position: absolute;
+        /*position: absolute;*/
         background-color: transparent;
     }
     .sharepoint-bar__nav-links {
         position: absolute;
-        top: 20px;
+        display: block;
+        width: 100%;
+        top: 30px;
+        left: 0;
         padding: 0;
-        justify-content: center;
+        text-align: center;
     }
     .sharepoint-bar__nav-links li {
         float: none;
