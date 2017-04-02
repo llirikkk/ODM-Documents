@@ -77,7 +77,7 @@
         transition: height 0.3s ease;
     }
     .sharepoint-bar-wrap:hover {
-        height: 300px;
+        height: 200px;
     }
     .sharepoint-bar-wrap:hover .sharepoint-bar__logo::after {
         transform: rotate(180deg);
@@ -96,7 +96,7 @@
     }
     .sharepoint-bar__nav {
         position: absolute;
-        top: 40px;
+        top: 30px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -104,6 +104,9 @@
     .sharepoint-bar__nav-user {
         /*position: absolute;*/
         background-color: transparent;
+    }
+    .sharepoint-bar__nav-user a {
+        color: #fff;
     }
     .sharepoint-bar__nav-links {
         position: absolute;
@@ -119,7 +122,21 @@
     }
 
     .header-bottom-nav-bar {
-        top: 150px;
+        top: 140px;
+        width: 100%;
+        display: block;
+        background-color: transparent;
+        padding: 0;
+    }
+    .header-bottom-nav-bar a {
+        color: #fff;
+    }
+    .header-bottom-nav-bar__left {
+        justify-content: center;
+    }
+    .header-bottom-nav-bar__right {
+        display: flex;
+        justify-content: center;
     }
     /*noinspection CssNoGenericFontName*/
     .sharepoint-bar__logo::after {
