@@ -61,7 +61,41 @@ header ul li {
         margin-left: 35px;
     }
 }
+@media screen and (max-width: 827px){
+    .document-menu li a{
+        font-size: 0;
+        width: 50px;
+        padding: 0;
+    }
+    .document-menu a:after {
+        font-size: 14px;
+        margin-right: 7px;
+    }
+    .document-menu a:before {
+        margin-left: 7px;
+        margin-bottom: 2px;
+    }
+}
 @media screen and (max-width: 630px) {
+    .main-section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .main-section .tabs {
+        border-left: none;
+        border-right: none;
+    }
+    .tab-links a {
+        padding: 5px;
+        text-transform: uppercase;
+        font-size: 14px;
+        text-align: center;
+    }
+    .tab-links a::before {
+        display: none;
+        margin-right: 5px;
+        padding-right: 0;
+    }
     .sharepoint-bar-wrap {
         position: absolute;
         width: 100%;
@@ -130,19 +164,6 @@ header ul li {
         top: 95px;
         padding: 0;
     }
-    .document-menu li a{
-        font-size: 0;
-        width: 50px;
-        padding: 0;
-    }
-    .document-menu a:after {
-        font-size: 14px;
-        margin-right: 7px;
-    }
-    .document-menu a:before {
-        margin-left: 7px;
-        margin-bottom: 2px;
-    }
     .incoming-documents thead {
         display: none;
     }
@@ -194,5 +215,23 @@ header ul li {
     }
     .incoming-documents td:nth-child(11):before {
         content: 'Actions:';
+    }
+}
+@media screen and (max-width: 517px){
+    .main-section header {
+
+    }
+    .section-search {
+        width: 100%;
+        position: absolute;
+    }
+    input[type=search] {
+        position: absolute;
+        width: calc(100% - 110px);
+        right: 0;
+        transition: width 0.3s ease;
+    }
+    input[type=search]:focus {
+        width: 100%;
     }
 }
