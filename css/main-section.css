@@ -75,7 +75,7 @@
 }
 input[type=search]{
     width: 390px;
-    padding: 12px 6px 12px 12px;
+    padding-left: 12px;
     height: 35px;
 }
 /*End of Section search*/
