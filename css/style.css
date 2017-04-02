@@ -294,4 +294,17 @@ header ul li {
     input[type=search]:focus {
         width: calc(100% - 2px);
     }
+    footer {
+        padding-right: 20px;
+        padding-left: 20px;
+        flex-wrap: nowrap;
+    }
+    footer ul {
+        display: flex;
+        align-items: center;
+    }
+    footer ul li {
+        padding: 0 6px;
+        white-space: nowrap;
+    }
 }
