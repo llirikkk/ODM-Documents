@@ -275,6 +275,9 @@
         float: left;
         width: 50%;
     }
+    .tab-content table tr:nth-child(2n) + tr {
+        background-color: #f1f1f1;
+    }
 }
 @media screen and (max-width: 630px) and (orientation : portrait){
     .tab-content section tbody tr {
