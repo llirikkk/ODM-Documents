@@ -87,7 +87,7 @@ aside {
 /*End of menu*/
 /*Dropdown menu*/
 
-input[type=checkbox]{
+.menu input[type=checkbox]{
     position: absolute;
     top: -9999px;
     left: -9999px;
@@ -97,15 +97,15 @@ input[type=checkbox]{
     overflow: hidden;
     transition: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-input[type=checkbox]:checked ~ .menu__submenu{
+.menu input[type=checkbox]:checked ~ .menu__submenu{
     max-height: 500px;
     border-bottom: 1px solid #5ecbdc;
 }
-input[type=checkbox]:checked ~ label{
+.menu input[type=checkbox]:checked ~ label{
     background-color: #31a5b7;
 }
 
-input[type=checkbox]:checked ~ label::after {
+.menu input[type=checkbox]:checked ~ label::after {
     transform: rotate(180deg);
 }
 .menu label {
@@ -147,4 +147,9 @@ input[type=checkbox]:checked ~ label::after {
 /*Mobile nav*/
 .mobile_nav {
     display: none;
+}
+#toggle__mobile-nav {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }

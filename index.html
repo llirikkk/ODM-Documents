@@ -11,7 +11,6 @@
 <body>
 <div class="body-wrapper" onclick="void(0)">
     <header class="page-header">
-
         <div class="sharepoint-bar-wrap">
             <div class="sharepoint-bar">
 
@@ -57,9 +56,12 @@
     </header>
     <aside>
         <nav>
-            <nav class="mobile_nav" onclick="void(0)">
-                <span class="fa fa-bars"></span>
-            </nav>
+            <input type="checkbox" id="toggle__mobile-nav">
+            <label for="toggle__mobile-nav" class="mobile-nav__toggler">
+                <nav class="mobile_nav" onclick="void(0)">
+                    <span class="fa fa-bars"></span>
+                </nav>
+            </label>
             <ul class="menu">
                 <li><a href="#" class="menu__item-home">Home</a></li>
                 <li class="menu__item_active" id="menu__item_has-submenu">
