@@ -85,6 +85,10 @@ header ul li {
         border-left: none;
         border-right: none;
     }
+    .main-section h1 {
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
     .tab-links a {
         padding: 5px;
         text-transform: uppercase;
@@ -163,6 +167,14 @@ header ul li {
     .menu {
         top: 95px;
         padding: 0;
+        font-size: 14px;
+    }
+    .menu a {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .document-menu li:first-child {
+        margin-left: 2px;
     }
     .incoming-documents thead {
         display: none;
@@ -217,7 +229,7 @@ header ul li {
         content: 'Actions:';
     }
 }
-@media screen and (max-width: 517px){
+@media screen and (max-width: 530px){
     .main-section header {
 
     }
@@ -227,11 +239,11 @@ header ul li {
     }
     input[type=search] {
         position: absolute;
-        width: calc(100% - 110px);
+        width: calc(100% - 112px);
         right: 0;
         transition: width 0.3s ease;
     }
     input[type=search]:focus {
-        width: 100%;
+        width: calc(100% - 2px);
     }
 }
