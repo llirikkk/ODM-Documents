@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 <body>
+<div class="body-wrapper" onclick="void(0)">
     <header class="page-header">
 
         <div class="sharepoint-bar-wrap">
@@ -56,7 +57,7 @@
     </header>
     <aside>
         <nav>
-            <nav class="mobile_nav">
+            <nav class="mobile_nav" onclick="void(0)">
                 <span class="fa fa-bars"></span>
             </nav>
             <ul class="menu">
@@ -64,7 +65,7 @@
                 <li class="menu__item_active" id="menu__item_has-submenu">
                     <input type="checkbox" id="toggle">
                     <label for="toggle" class="menu__item_submenu"><a class="menu__item-documents">Documents</a></label>
-                    <ul class = "menu__submenu">
+                    <ul class="menu__submenu">
                         <li><a href="#">Incoming documents</a></li>
                         <li><a href="#">Outgoing documents</a></li>
                         <li><a href="#">Fax documents</a></li>
@@ -103,7 +104,8 @@
         <div class="tabs">
             <ul class="tab-links">
                 <li><a href="#" class="tab-links__item-created">Created by me</a></li>
-                <li class="tab-links__item_active"><a href="#" class="tab-links__item-under-approval">Under my approval</a></li>
+                <li class="tab-links__item_active"><a href="#" class="tab-links__item-under-approval">Under my
+                    approval</a></li>
                 <li><a href="#" class="tab-links__item-sent">Sent for group</a></li>
             </ul>
             <div class="tab-content">
@@ -113,64 +115,64 @@
                         <h1>Incoming documents</h1>
                         <table>
                             <thead>
-                                <tr>
-                                    <th class="th-sorted th-sorted_down"><a href="#">Incoming date</a></th>
-                                    <th>Incoming number</th>
-                                    <th>External Doc.&nbsp;Index</th>
-                                    <th>External Doc.&nbsp;Date</th>
-                                    <th>Type</th>
-                                    <th>Theme</th>
-                                    <th>Sent&nbsp;From</th>
-                                    <th>Sent&nbsp;To</th>
-                                    <th>Executor</th>
-                                    <th>Execution Date</th>
-                                    <th>Execution Mark</th>
-                                    <th>Actions</th>
-                                </tr>
+                            <tr>
+                                <th class="th-sorted th-sorted_down"><a href="#">Incoming date</a></th>
+                                <th>Incoming number</th>
+                                <th>External Doc.&nbsp;Index</th>
+                                <th>External Doc.&nbsp;Date</th>
+                                <th>Type</th>
+                                <th>Theme</th>
+                                <th>Sent&nbsp;From</th>
+                                <th>Sent&nbsp;To</th>
+                                <th>Executor</th>
+                                <th>Execution Date</th>
+                                <th>Execution Mark</th>
+                                <th>Actions</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01/6</td>
-                                    <td>01-01</td>
-                                    <td>07/15/2015</td>
-                                    <td>Letter</td>
-                                    <td>Whatever</td>
-                                    <td>Organization&nbsp;1</td>
-                                    <td>EPAM</td>
-                                    <td>Ivanov&nbsp;Ivan</td>
-                                    <td>15/15/2015</td>
-                                    <td><span class="table-mark table-mark_signed">Signed</span></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01/6</td>
-                                    <td>01-01</td>
-                                    <td>07/15/2015</td>
-                                    <td>Letter</td>
-                                    <td>Whatever</td>
-                                    <td>Organization 1</td>
-                                    <td>EPAM</td>
-                                    <td>Ivanov Ivan</td>
-                                    <td>10/15/2015</td>
-                                    <td><span class="table-mark table-mark_awaits">Awaits</span></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01/6</td>
-                                    <td>01-01</td>
-                                    <td>07/15/2015</td>
-                                    <td>Letter</td>
-                                    <td>Whatever</td>
-                                    <td>Organization&nbsp;1</td>
-                                    <td>EPAM</td>
-                                    <td>Ivanov Ivan</td>
-                                    <td>07/15/2015</td>
-                                    <td><span class="table-mark table-mark_cancelled">Cancelled</span></td>
-                                    <td></td>
-                                </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01/6</td>
+                                <td>01-01</td>
+                                <td>07/15/2015</td>
+                                <td>Letter</td>
+                                <td>Whatever</td>
+                                <td>Organization&nbsp;1</td>
+                                <td>EPAM</td>
+                                <td>Ivanov&nbsp;Ivan</td>
+                                <td>15/15/2015</td>
+                                <td><span class="table-mark table-mark_signed">Signed</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01/6</td>
+                                <td>01-01</td>
+                                <td>07/15/2015</td>
+                                <td>Letter</td>
+                                <td>Whatever</td>
+                                <td>Organization 1</td>
+                                <td>EPAM</td>
+                                <td>Ivanov Ivan</td>
+                                <td>10/15/2015</td>
+                                <td><span class="table-mark table-mark_awaits">Awaits</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01/6</td>
+                                <td>01-01</td>
+                                <td>07/15/2015</td>
+                                <td>Letter</td>
+                                <td>Whatever</td>
+                                <td>Organization&nbsp;1</td>
+                                <td>EPAM</td>
+                                <td>Ivanov Ivan</td>
+                                <td>07/15/2015</td>
+                                <td><span class="table-mark table-mark_cancelled">Cancelled</span></td>
+                                <td></td>
+                            </tr>
                             </tbody>
                         </table>
                     </section>
@@ -178,60 +180,60 @@
                         <h1>Outgoing documents</h1>
                         <table>
                             <thead>
-                                <tr>
-                                    <th class="th-sorted th-sorted_down"><a href="#">Outgoing Date</a></th>
-                                    <th>Reg.&nbsp;Number</th>
-                                    <th>Index</th>
-                                    <th>Type</th>
-                                    <th>Theme</th>
-                                    <th>Sent&nbsp;To</th>
-                                    <th>Executor</th>
-                                    <th>Signatory</th>
-                                    <th>Notes</th>
-                                    <th>Status</th>
-                                    <th>Actions</th>
-                                </tr>
+                            <tr>
+                                <th class="th-sorted th-sorted_down"><a href="#">Outgoing Date</a></th>
+                                <th>Reg.&nbsp;Number</th>
+                                <th>Index</th>
+                                <th>Type</th>
+                                <th>Theme</th>
+                                <th>Sent&nbsp;To</th>
+                                <th>Executor</th>
+                                <th>Signatory</th>
+                                <th>Notes</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01/6</td>
-                                    <td>01-01</td>
-                                    <td>Letter</td>
-                                    <td>Whatever</td>
-                                    <td>Organization&nbsp;1</td>
-                                    <td>Ivanov Ivan</td>
-                                    <td>Petrov Petr</td>
-                                    <td></td>
-                                    <td><span class="table-mark table-mark_approved">Approved</span></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01/6</td>
-                                    <td>01-01</td>
-                                    <td>Note</td>
-                                    <td>Whatever</td>
-                                    <td>Organization 1</td>
-                                    <td>Ivanov Ivan</td>
-                                    <td>Petrov Petr</td>
-                                    <td></td>
-                                    <td><span class="table-mark table-mark_held">Held</span></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01/6</td>
-                                    <td>01-01</td>
-                                    <td>Letter</td>
-                                    <td>Whatever</td>
-                                    <td>Organization 1</td>
-                                    <td>Ivanov&nbsp;Ivan</td>
-                                    <td>Petrov&nbsp;Petr</td>
-                                    <td></td>
-                                    <td><span class="table-mark table-mark_changed">Changed</span></td>
-                                    <td></td>
-                                </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01/6</td>
+                                <td>01-01</td>
+                                <td>Letter</td>
+                                <td>Whatever</td>
+                                <td>Organization&nbsp;1</td>
+                                <td>Ivanov Ivan</td>
+                                <td>Petrov Petr</td>
+                                <td></td>
+                                <td><span class="table-mark table-mark_approved">Approved</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01/6</td>
+                                <td>01-01</td>
+                                <td>Note</td>
+                                <td>Whatever</td>
+                                <td>Organization 1</td>
+                                <td>Ivanov Ivan</td>
+                                <td>Petrov Petr</td>
+                                <td></td>
+                                <td><span class="table-mark table-mark_held">Held</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01/6</td>
+                                <td>01-01</td>
+                                <td>Letter</td>
+                                <td>Whatever</td>
+                                <td>Organization 1</td>
+                                <td>Ivanov&nbsp;Ivan</td>
+                                <td>Petrov&nbsp;Petr</td>
+                                <td></td>
+                                <td><span class="table-mark table-mark_changed">Changed</span></td>
+                                <td></td>
+                            </tr>
                             </tbody>
                         </table>
                     </section>
@@ -239,34 +241,34 @@
                         <h1>Fax documents</h1>
                         <table>
                             <thead>
-                                <tr>
-                                    <th class="th-sorted th-sorted_down"><a href="#">Incoming date</a></th>
-                                    <th>External Doc.&nbsp;Index</th>
-                                    <th>External Doc.&nbsp;Date</th>
-                                    <th>Type</th>
-                                    <th>Theme</th>
-                                    <th>Sent From</th>
-                                    <th>Sent&nbsp;To</th>
-                                    <th>Executor</th>
-                                    <th>Execution Date</th>
-                                    <th>Execution Mark</th>
-                                    <th>Actions</th>
-                                </tr>
+                            <tr>
+                                <th class="th-sorted th-sorted_down"><a href="#">Incoming date</a></th>
+                                <th>External Doc.&nbsp;Index</th>
+                                <th>External Doc.&nbsp;Date</th>
+                                <th>Type</th>
+                                <th>Theme</th>
+                                <th>Sent From</th>
+                                <th>Sent&nbsp;To</th>
+                                <th>Executor</th>
+                                <th>Execution Date</th>
+                                <th>Execution Mark</th>
+                                <th>Actions</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>07/15/2015</td>
-                                    <td>01-01</td>
-                                    <td>07/15/2015</td>
-                                    <td>Letter</td>
-                                    <td>Whatever</td>
-                                    <td>Organization&nbsp;1</td>
-                                    <td>EPAM</td>
-                                    <td>Ivanov&nbsp;Ivan</td>
-                                    <td>07/15/2015</td>
-                                    <td><span class="table-mark table-mark_deleted">Deleted</span></td>
-                                    <td></td>
-                                </tr>
+                            <tr>
+                                <td>07/15/2015</td>
+                                <td>01-01</td>
+                                <td>07/15/2015</td>
+                                <td>Letter</td>
+                                <td>Whatever</td>
+                                <td>Organization&nbsp;1</td>
+                                <td>EPAM</td>
+                                <td>Ivanov&nbsp;Ivan</td>
+                                <td>07/15/2015</td>
+                                <td><span class="table-mark table-mark_deleted">Deleted</span></td>
+                                <td></td>
+                            </tr>
                             </tbody>
                         </table>
                     </section>
@@ -283,5 +285,6 @@
             <li><a href="#">Report a bug</a></li>
         </ul>
     </footer>
+</div>
 </body>
 </html>
