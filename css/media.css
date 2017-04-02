@@ -268,7 +268,13 @@
     .outgoing-documents td:nth-child(11):before {
         content: 'Actions:';
     }
-
+}
+@media screen and (max-width: 630px) and (orientation : landscape){
+    .tab-content section tbody tr {
+        display: block;
+        float: left;
+        width: 50%;
+    }
 }
 @media screen and (max-width: 530px){
     .section-search {
