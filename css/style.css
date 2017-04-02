@@ -8,6 +8,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
 body {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 14px;
