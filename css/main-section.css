@@ -157,7 +157,7 @@ input[type=search]{
 }
 .tab-content h1 {
     position: absolute;
-    z-index: 1000;
+    z-index: 900;
     left: 21px;
 }
 .tab-content table {
