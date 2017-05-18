@@ -2,10 +2,14 @@
 @import "nav.css";
 @import "main-section.css";
 @import "footer.css";
+@import "media.css";
 
 * {
     margin: 0;
     padding: 0;
+}
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
 }
 body {
     font-family: "Source Sans Pro", sans-serif;
@@ -14,15 +18,15 @@ body {
 a {
     text-decoration: none;
 }
-.main-section {
-    min-width: 585px;
-}
-body > header {
-    min-width: 850px;
-}
-body > footer {
-    min-width: 850px;
-}
+/*.main-section {*/
+    /*min-width: 585px;*/
+/*}*/
+/*body > header {*/
+    /*min-width: 850px;*/
+/*}*/
+/*body > footer {*/
+    /*min-width: 850px;*/
+/*}*/
 header ul li {
     display: block;
     float: left;
