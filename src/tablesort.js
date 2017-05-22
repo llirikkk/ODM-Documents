@@ -9,6 +9,8 @@ const tr = incDocTable.tHead.rows[0];
 
 // Current heading
 let target = tr.cells[0];
+
+// Direction of sort
 let reverse = -1;
 
 tr.addEventListener("click",sortTable, false);
@@ -17,6 +19,9 @@ function sortTable(event){
     if(target != event.target) {
         target.classList.remove("th-sorted", "th-sorted_up");
         target = event.target;
+        while (target.tagName != "TH") {
+            target = target.parentNode;
+        }
         target.classList.add("th-sorted");
         reverse = 1;
     } else {
