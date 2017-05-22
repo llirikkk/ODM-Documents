@@ -218,7 +218,7 @@ input[type=search]{
     bottom: 0;
     left: 15px;
 }
-.th-sorted_down::before {
+.th-sorted::before {
     content: "\f107";
     font-family: FontAwesome;
     position: absolute;
@@ -226,13 +226,6 @@ input[type=search]{
     bottom: 12%;
     font-size: 15px;
 }
-/*noinspection CssNoGenericFontName*/
-/*.th-sorted_down a::after {
-    content: "\f107";
-    font-family: FontAwesome;
-    position: absolute;
-    right: -12px;
-    top: 30%;
-    font-size: 15px;
-}*/
-/*End of Main section*/
+.th-sorted_up::before {
+    transform: rotate(180deg);;
+}
