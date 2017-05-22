@@ -202,12 +202,13 @@ input[type=search]{
 }
 .th-sorted {
     position: relative;
-}
-.th-sorted a {
     color: #36c3d8;
-    display: inline-block;
-    position: relative;
 }
+/*.th-sorted a {*/
+    /*color: #36c3d8;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+/*}*/
 .th-sorted::after {
     content: "";
     position: absolute;
@@ -217,14 +218,21 @@ input[type=search]{
     bottom: 0;
     left: 15px;
 }
-
+.th-sorted_down::before {
+    content: "\f107";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0;
+    bottom: 12%;
+    font-size: 15px;
+}
 /*noinspection CssNoGenericFontName*/
-.th-sorted_down a::after {
+/*.th-sorted_down a::after {
     content: "\f107";
     font-family: FontAwesome;
     position: absolute;
     right: -12px;
     top: 30%;
     font-size: 15px;
-}
+}*/
 /*End of Main section*/

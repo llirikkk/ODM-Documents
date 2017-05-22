@@ -7,12 +7,17 @@ const rows = [].slice.call(tBody.rows);
 // Table headings
 const tr = incDocTable.tHead.rows[0];
 
+// First heading
+let target = tr.cells[0];
 
 tr.addEventListener("click",sortTable, false);
 
 function sortTable(event){
-    let target = event.target;
+    target.classList.remove("th-sorted", "th-sorted_down");
+    target = event.target;
     const index = target.cellIndex;
+
+    target.classList.add("th-sorted", "th-sorted_down");
 
     // Stable sort of table rows.
     rows.sort(function(a, b){
