@@ -112,8 +112,8 @@
                 <li><a href="#" class="tab-links__item-sent">Sent for group</a></li>
             </ul>
             <div class="tab-content">
-                <!--<div id="created-by-me"></div>-->
-                <div class="under-my-approval">
+                <div id="created-by-me" class="tab-content_hide"><p>Created by me. Content here</p></div>
+                <div id="under-my-approval" class="tab-content_hide">
                     <section class="incoming-documents">
                         <h1>Incoming documents</h1>
                         <table id="incoming-documents__table">
@@ -276,7 +276,7 @@
                         </table>
                     </section>
                 </div>
-                <!--<div id="sent-for-group"></div>-->
+                <div id="sent-for-group" class="tab-content_hide"><p>Sent for group. Content here</p></div>
             </div>
         </div>
     </section>
@@ -289,6 +289,7 @@
         </ul>
     </footer>
 </div>
+<script src="src/tabs.js"></script>
 <script src="src/tablesort.js"></script>
 </body>
 </html>

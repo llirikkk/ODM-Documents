@@ -132,6 +132,9 @@ input[type=search]{
 .tabs {
     position: relative;
 }
+.tab-content_hide {
+    display: none;
+}
 .tab-content {
     overflow: auto;
 }

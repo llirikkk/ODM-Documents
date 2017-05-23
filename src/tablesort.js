@@ -2,17 +2,17 @@
     for (let i = 0, len = tableIDs.length; i < len; i++) {
         const table = document.getElementById(tableIDs[i]);
         const tBody = table.tBodies[0];
-// The array of table rows to be sorted
-        const rows = Array.prototype.slice.call(tBody.rows);
 
+        // The array of table rows to be sorted
+        const rowArray = Array.prototype.slice.call(tBody.rows);
 
-// Table headings
+        // Table headings
         const tr = table.tHead.rows[0];
 
-// Current heading
+        // Current heading
         let target = tr.cells[0];
 
-// Direction of sort
+        // Direction of sort
         let reverse = -1;
 
         tr.addEventListener("click", sortTable, false);
@@ -32,7 +32,7 @@
             const index = target.cellIndex;
 
             // Stable sort of table rows.
-            rows.sort(function (a, b) {
+            rowArray.sort(function (a, b) {
                 if (a.cells[index].textContent > b.cells[index].textContent) {
                     return reverse;
                 }
@@ -42,8 +42,8 @@
                 // To provide stable sort: if elements are equal we keep them in the original order
                 return a.rowIndex - b.rowIndex;
             });
-            for (let i = 0, len = rows.length; i < len; i++) {
-                tBody.appendChild(rows[i]);
+            for (let i = 0, len = rowArray.length; i < len; i++) {
+                tBody.appendChild(rowArray[i]);
             }
             table.appendChild(tBody);
             reverse = -reverse;
