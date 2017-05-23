@@ -8,6 +8,10 @@ let currentTabId = queryString["tab"] || "under-my-approval";
 let currentTab = document.getElementById(currentTabId) || document.getElementById("under-my-approval");
 currentTab.classList.remove("tab-content_hide");
 
+let currentTabAnchor = document.querySelector(`a[href="#${currentTab.id}"]`);
+currentTabAnchor.parentNode.classList.add("tab-links__item_active");
+
+// Adding handlers to tab anchors
 const tabAnchors = document.querySelectorAll(".tab-links a");
 for (let i = 0, len = tabAnchors.length; i < len; i++){
     tabAnchors[i].addEventListener("click", tabHandler);
@@ -18,8 +22,11 @@ function tabHandler(event) {
     event.preventDefault();
     history.replaceState("", "", `?tab=${tabId}`);
     if (currentTab.id != tabId){
+        currentTabAnchor.parentNode.classList.remove("tab-links__item_active");
         currentTab.classList.add("tab-content_hide");
         currentTab = document.getElementById(tabId);
+        currentTabAnchor = event.target;
+        currentTabAnchor.parentNode.classList.add("tab-links__item_active");
         currentTab.classList.remove("tab-content_hide");
     }
 }
