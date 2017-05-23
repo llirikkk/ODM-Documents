@@ -14,6 +14,12 @@ for (let i = 0, len = tabAnchors.length; i < len; i++){
 }
 
 function tabHandler(event) {
+    const tabId = event.target.hash.slice(1);
     event.preventDefault();
-    history.replaceState("", "", "?tab=" + event.target.hash.slice(1));
+    history.replaceState("", "", `?tab=${tabId}`);
+    if (currentTab.id != tabId){
+        currentTab.classList.add("tab-content_hide");
+        currentTab = document.getElementById(tabId);
+        currentTab.classList.remove("tab-content_hide");
+    }
 }
