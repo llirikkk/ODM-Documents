@@ -28,5 +28,9 @@ function tabHandler(event) {
         currentTabAnchor = event.target;
         currentTabAnchor.parentNode.classList.add("tab-links__item_active");
         currentTab.classList.remove("tab-content_hide");
+        if (!currentTab.getAttribute("loaded")) {
+            loadTabContent(currentTab.id);
+        }
+        currentTab.setAttribute("loaded", "true");
     }
 }
