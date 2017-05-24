@@ -1,5 +1,5 @@
 const createdByMeTab = document.getElementById("created-by-me");
-let tableName = "incoming-documents";
+let tableName = "inc-doc-created";
 let xhr = new XMLHttpRequest();
 
 xhr.open("GET", `./src/${tableName}.json`, true);
@@ -29,7 +29,6 @@ function renderHTML(tableData) {
             markIndex = i;
         }
     }
-
     for (let i = 0, len = tBodyArray.length; i < len; i++) {
         let tr = document.createElement("tr");
 
@@ -62,12 +61,14 @@ function renderHTML(tableData) {
         tBody.appendChild(tr);
     }
 
-    table.id = `${tableName}__test`;
+    table.id = `${tableName}__table`;
     tHead.appendChild(tHeadTr);
     table.appendChild(tHead);
     table.appendChild(tBody);
 
     createdByMeTab.appendChild(table);
-
     console.log(markIndex);
+
+    // Init sort
+    initSort(table.id);
 }

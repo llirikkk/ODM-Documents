@@ -1,4 +1,4 @@
-(function initSort(...tableIDs) {
+function initSort(...tableIDs) {
     for (let i = 0, len = tableIDs.length; i < len; i++) {
         const table = document.getElementById(tableIDs[i]);
         const tBody = table.tBodies[0];
@@ -49,4 +49,6 @@
             reverse = -reverse;
         }
     }
-})("incoming-documents__table", "outgoing-documents__table", "fax-documents__table");
+}
+
+initSort("incoming-documents__table", "outgoing-documents__table", "fax-documents__table");
