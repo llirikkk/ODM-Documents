@@ -10,7 +10,8 @@ function initSort(...tableIDs) {
         const tr = table.tHead.rows[0];
 
         // Current heading
-        let target = tr.cells[0];
+        let target;
+        // let target = tr.cells[0];
 
         // Direction of sort
         let reverse = -1;
@@ -18,8 +19,10 @@ function initSort(...tableIDs) {
         tr.addEventListener("click", sortTable, false);
 
         function sortTable(event) {
-            if (target != event.target) {
-                target.classList.remove("th-sorted", "th-sorted_up");
+            if (target != event.target || !target) {
+                if (target) {
+                    target.classList.remove("th-sorted", "th-sorted_up");
+                }
                 target = event.target;
                 while (target.tagName != "TH") {
                     target = target.parentNode;
@@ -29,6 +32,7 @@ function initSort(...tableIDs) {
             } else {
                 target.classList.toggle("th-sorted_up");
             }
+
             const index = target.cellIndex;
 
             // Stable sort of table rows.
