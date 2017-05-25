@@ -1,20 +1,31 @@
 function loadTabContent(tabId) {
     const tab = document.getElementById(tabId);
-    let tableName = `${tabId}-inc`;
-    let xhr = new XMLHttpRequest();
+    const tabTables = [`${tabId}-inc`, `${tabId}-out`, `${tabId}-fax`];
 
-    xhr.open("GET", `./src/${tableName}.json`, true);
-    xhr.onload = function() {
-        const xhrData = JSON.parse(xhr.responseText);
-        renderHTML(xhrData);
-    };
-    xhr.send();
+    let tableName = tabTables[0];
+
+    getTable(tableName);
+
+    function getTable(tableName) {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("GET", `./src/${tableName}.json`, true);
+        xhr.onload = function() {
+            const xhrData = JSON.parse(xhr.responseText);
+            renderHTML(xhrData);
+        };
+        xhr.send();
+    }
 
     function renderHTML(tableData) {
         const table = document.createElement("table");
         const tHead = document.createElement("thead");
         const tBody = document.createElement("tbody");
         const tHeadTr = document.createElement("tr");
+        const heading = document.createElement("h1");
+
+        // Initializing table heading
+        heading.textContent = tableData["heading"];
 
         // Index of table Execution marks
         let markIndex;
@@ -67,6 +78,8 @@ function loadTabContent(tabId) {
         table.appendChild(tHead);
         table.appendChild(tBody);
 
+        // Adding heading to the table
+        tab.appendChild(heading);
         tab.appendChild(table);
         console.log(markIndex);
 

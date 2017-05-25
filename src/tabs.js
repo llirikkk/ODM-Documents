@@ -1,5 +1,7 @@
 const uri = window.location.href;
 let queryString = {};
+
+// Getting currentTabId from uri
 uri.replace(
     new RegExp("([^?=&]+)(=([^&]*))?", "g"),
     function($0, $1, $2, $3) { queryString[$1] = $3; }
@@ -28,6 +30,8 @@ function tabHandler(event) {
         currentTabAnchor = event.target;
         currentTabAnchor.parentNode.classList.add("tab-links__item_active");
         currentTab.classList.remove("tab-content_hide");
+
+        // If current tab hadn't been loaded, load tab content
         if (!currentTab.getAttribute("loaded")) {
             loadTabContent(currentTab.id);
         }
