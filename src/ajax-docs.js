@@ -5,6 +5,7 @@ function loadTabContent(tabId) {
     let tableName = tabTables[0];
 
     getTable(tableName);
+    getTable(tabTables[1]);
 
     function getTable(tableName) {
         let xhr = new XMLHttpRequest();
@@ -37,7 +38,9 @@ function loadTabContent(tabId) {
             let th = document.createElement("th");
             th.innerHTML = thArray[i];
             tHeadTr.appendChild(th);
-            if (thArray[i].toLowerCase() === "execution mark") {
+
+            const el = thArray[i].toLowerCase();
+            if (el === "execution mark" || el === "status") {
                 markIndex = i;
             }
         }
@@ -61,6 +64,15 @@ function loadTabContent(tabId) {
                             break;
                         case "cancelled":
                             span.classList.add("table-mark", "table-mark_cancelled");
+                            break;
+                        case "approved":
+                            span.classList.add("table-mark", "table-mark_approved");
+                            break;
+                        case "held":
+                            span.classList.add("table-mark", "table-mark_held");
+                            break;
+                        case "changed":
+                            span.classList.add("table-mark", "table-mark_changed");
                             break;
                     }
                     span.innerHTML = mark;
