@@ -1,7 +1,12 @@
 function loadTabContent(tabId) {
     const tab = document.getElementById(tabId);
-    const tabTables = [`${tabId}-inc`, `${tabId}-out`];
-    let tableName;
+
+    // List of tables to be loaded
+    const tabTables = [`${tabId}-inc`, `${tabId}-out`, `${tabId}-fax`];
+
+    // Array of loaded tables
+    let tableCache = [],
+        tableName;
     for (let i = 0, len = tabTables.length; i < len; i++) {
         tableName = tabTables[i];
         getTable(tableName);
@@ -80,6 +85,8 @@ function loadTabContent(tabId) {
                         case "changed":
                             span.classList.add("table-mark", "table-mark_changed");
                             break;
+                        case "deleted":
+                            span.classList.add("table-mark", "table-mark_deleted");
                     }
                     span.innerHTML = mark;
                     td.appendChild(span);
@@ -100,9 +107,15 @@ function loadTabContent(tabId) {
         // Adding heading to the table
         tab.appendChild(heading);
         tab.appendChild(table);
-        console.log(markIndex);
+
+        tableCache.push({
+            "heading": heading,
+            "table": table
+        });
 
         // Init sort
         initSort(table.id);
     }
+
+    console.log(tableCache);
 }
