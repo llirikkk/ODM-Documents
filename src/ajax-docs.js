@@ -1,24 +1,27 @@
 function loadTabContent(tabId) {
     const tab = document.getElementById(tabId);
-    const tabTables = [`${tabId}-inc`, `${tabId}-out`, `${tabId}-fax`];
-
-    let tableName = tabTables[0];
-
-    getTable(tableName);
-    getTable(tabTables[1]);
+    const tabTables = [`${tabId}-inc`, `${tabId}-out`];
+    let tableName;
+    for (let i = 0, len = tabTables.length; i < len; i++) {
+        tableName = tabTables[i];
+        getTable(tableName);
+    }
 
     function getTable(tableName) {
         let xhr = new XMLHttpRequest();
-
         xhr.open("GET", `./src/${tableName}.json`, true);
         xhr.onload = function() {
             const xhrData = JSON.parse(xhr.responseText);
-            renderHTML(xhrData);
+
+            /* AJAX request is asynchronous and because of it we must
+            * pass tableName to renderHTML() as a parameter, in order to save it
+            * in a closure of onload-callback*/
+            renderHTML(xhrData, tableName);
         };
         xhr.send();
     }
 
-    function renderHTML(tableData) {
+    function renderHTML(tableData, tableName) {
         const table = document.createElement("table");
         const tHead = document.createElement("thead");
         const tBody = document.createElement("tbody");
@@ -34,6 +37,7 @@ function loadTabContent(tabId) {
         let thArray = tableData["tHead"];
         let tBodyArray = tableData["tBody"];
 
+        // Forming tHead
         for (let i = 0, len = thArray.length; i < len; i++) {
             let th = document.createElement("th");
             th.innerHTML = thArray[i];
@@ -44,6 +48,8 @@ function loadTabContent(tabId) {
                 markIndex = i;
             }
         }
+
+        // Forming tBody
         for (let i = 0, len = tBodyArray.length; i < len; i++) {
             let tr = document.createElement("tr");
 
@@ -85,6 +91,7 @@ function loadTabContent(tabId) {
             tBody.appendChild(tr);
         }
 
+        // Adding table with heading to the tab
         table.id = `${tableName}__table`;
         tHead.appendChild(tHeadTr);
         table.appendChild(tHead);

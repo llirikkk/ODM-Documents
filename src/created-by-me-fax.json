@@ -1,0 +1,57 @@
+{
+  "heading": "Outgoing documents",
+  "tHead": [
+    "Ougoing date",
+    "Reg.&nbsp;Number",
+    "Index",
+    "Type",
+    "Theme",
+    "Sent&nbsp;To",
+    "Executor",
+    "Signatory",
+    "Notes",
+    "Status",
+    "Actions"
+  ],
+  "tBody": [
+    [
+      "07/15/2015",
+      "01-01/6",
+      "01-01",
+      "Letter",
+      "Whatever",
+      "Organization 1",
+      "Ivanov Ivan",
+      "Petrov Petr",
+      "",
+      "Approved",
+      ""
+    ],
+    [
+      "07/15/2015",
+      "01-01/6",
+      "01-01",
+      "Note",
+      "Whatever",
+      "Organization 1",
+      "Ivanov Ivan",
+      "Petrov Petr",
+      "",
+      "Held",
+      ""
+    ],
+    [
+      "07/15/2015",
+      "01-01/6",
+      "01-01",
+      "Letter",
+      "Whatever",
+      "Organization 1",
+      "Ivanov Ivan",
+      "Petrov Petr",
+      "",
+      "Changed",
+      ""
+    ]
+  ]
+}
