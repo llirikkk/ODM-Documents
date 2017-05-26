@@ -9,6 +9,8 @@ uri.replace(
 let currentTabId = queryString["tab"] || "under-my-approval";
 let currentTab = document.getElementById(currentTabId) || document.getElementById("under-my-approval");
 currentTab.classList.remove("tab-content_hide");
+currentTab.setAttribute("loaded", "true");
+loadTabContent(currentTab.id);
 
 let currentTabAnchor = document.querySelector(`a[href="#${currentTab.id}"]`);
 currentTabAnchor.parentNode.classList.add("tab-links__item_active");

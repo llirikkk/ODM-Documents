@@ -1,0 +1,44 @@
+{
+  "heading": "Outgoing documents",
+  "documents": [
+    [
+      {"outgoing date": "07/15/2015"},
+      {"reg number": "01-01/6"},
+      {"index": "01-01"},
+      {"type": "Letter"},
+      {"theme": "Whatever"},
+      {"sent to": "Organization 1"},
+      {"executor": "Ivanov Ivan"},
+      {"signatory": "Petrov Petr"},
+      {"notes": ""},
+      {"status": "Approved"},
+      {"actions": ""}
+    ],
+    [
+      { "outgoing date": "07/15/2015"},
+      {"reg number": "01-01/6"},
+      {"index": "01-01"},
+      {"type": "Note"},
+      {"theme": "Whatever"},
+      {"sent to": "Organization 1"},
+      {"executor": "Ivanov Ivan"},
+      {"signatory": "Petrov Petr"},
+      {"notes": ""},
+      {"status": "Held"},
+      {"actions": ""}
+    ],
+    [
+      { "outgoing date": "07/15/2015"},
+      {"reg number": "01-01/6"},
+      {"index": "01-01"},
+      {"type": "Letter"},
+      {"theme": "Whatever"},
+      {"sent to": "Organization 1"},
+      {"executor": "Ivanov Ivan"},
+      {"signatory": "Petrov Petr"},
+      {"notes": ""},
+      {"status": "Changed"},
+      {"actions": ""}
+    ]
+  ]
+}

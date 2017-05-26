@@ -54,5 +54,3 @@ function initSort(...tableIDs) {
         }
     }
 }
-
-initSort("incoming-documents__table", "outgoing-documents__table", "fax-documents__table");
