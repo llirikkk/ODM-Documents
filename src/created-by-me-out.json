@@ -1,57 +1,44 @@
 {
   "heading": "Outgoing documents",
-  "tHead": [
-    "Outgoing date",
-    "Reg.&nbsp;Number",
-    "Index",
-    "Type",
-    "Theme",
-    "Sent&nbsp;To",
-    "Executor",
-    "Signatory",
-    "Notes",
-    "Status",
-    "Actions"
-  ],
-  "tBody": [
+  "documents": [
     [
-      "07/15/2015",
-      "01-01/6",
-      "01-01",
-      "Letter",
-      "Whatever",
-      "Organization 1",
-      "Ivanov Ivan",
-      "Petrov Petr",
-      "",
-      "Approved",
-      ""
+      {"outgoing date": "07/15/2015"},
+      {"reg number": "01-01/6"},
+      {"index": "01-01"},
+      {"type": "Letter"},
+      {"theme": "Whatever"},
+      {"sent to": "Organization 1"},
+      {"executor": "Ivanov Ivan"},
+      {"signatory": "Petrov Petr"},
+      {"notes": ""},
+      {"status": "Approved"},
+      {"actions": ""}
     ],
     [
-      "07/15/2015",
-      "01-01/6",
-      "01-01",
-      "Note",
-      "Whatever",
-      "Organization 1",
-      "Ivanov Ivan",
-      "Petrov Petr",
-      "",
-      "Held",
-      ""
+      { "outgoing date": "07/15/2015"},
+      {"reg number": "01-01/6"},
+      {"index": "01-01"},
+      {"type": "Note"},
+      {"theme": "Whatever"},
+      {"sent to": "Organization 1"},
+      {"executor": "Ivanov Ivan"},
+      {"signatory": "Petrov Petr"},
+      {"notes": ""},
+      {"status": "Held"},
+      {"actions": ""}
     ],
     [
-      "07/15/2015",
-      "01-01/6",
-      "01-01",
-      "Letter",
-      "Whatever",
-      "Organization 1",
-      "Ivanov Ivan",
-      "Petrov Petr",
-      "",
-      "Changed",
-      ""
+      { "outgoing date": "07/15/2015"},
+      {"reg number": "01-01/6"},
+      {"index": "01-01"},
+      {"type": "Letter"},
+      {"theme": "Whatever"},
+      {"sent to": "Organization 1"},
+      {"executor": "Ivanov Ivan"},
+      {"signatory": "Petrov Petr"},
+      {"notes": ""},
+      {"status": "Changed"},
+      {"actions": ""}
     ]
   ]
 }
