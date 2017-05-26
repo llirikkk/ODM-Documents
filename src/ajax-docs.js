@@ -2,7 +2,7 @@ function loadTabContent(tabId) {
     const tab = document.getElementById(tabId);
 
     // List of tables to be loaded
-    const tabTables = [`${tabId}-inc`, `${tabId}-out`];
+    const tabTables = [`${tabId}-inc`, `${tabId}-out`, `${tabId}-fax`];
 
     // Array of loaded tables
     let tableName;
