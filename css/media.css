@@ -191,81 +191,81 @@
         display: inline-block;
         width: 140px;
     }
-    .incoming-documents td:nth-child(1):before,
+    .inc-documents td:nth-child(1):before,
     .fax-documents td:nth-child(1):before {
         content: 'Incoming date:';
     }
-    .incoming-documents td:nth-child(2):before,
+    .inc-documents td:nth-child(2):before,
     .fax-documents td:nth-child(2):before {
         content: 'Incoming number:';
     }
-    .incoming-documents td:nth-child(3):before,
+    .inc-documents td:nth-child(3):before,
     .fax-documents td:nth-child(3):before {
         content: 'External Doc. Index:';
     }
-    .incoming-documents td:nth-child(4):before,
+    .inc-documents td:nth-child(4):before,
     .fax-documents td:nth-child(4):before {
         content: 'Type:';
     }
-    .incoming-documents td:nth-child(5):before,
+    .inc-documents td:nth-child(5):before,
     .fax-documents td:nth-child(5):before {
         content: 'Theme:';
     }
-    .incoming-documents td:nth-child(6):before,
+    .inc-documents td:nth-child(6):before,
     .fax-documents td:nth-child(6):before {
         content: 'Sent From:';
     }
-    .incoming-documents td:nth-child(7):before,
+    .inc-documents td:nth-child(7):before,
     .fax-documents td:nth-child(7):before {
         content: 'Sent To:';
     }
-    .incoming-documents td:nth-child(8):before,
+    .inc-documents td:nth-child(8):before,
     .fax-documents td:nth-child(8):before {
         content: 'Executor:';
     }
-    .incoming-documents td:nth-child(9):before,
+    .inc-documents td:nth-child(9):before,
     .fax-documents td:nth-child(9):before {
         content: 'Execution Date:';
     }
-    .incoming-documents td:nth-child(10):before,
+    .inc-documents td:nth-child(10):before,
     .fax-documents td:nth-child(10):before {
         content: 'Execution Mark:';
     }
-    .incoming-documents td:nth-child(11):before,
+    .inc-documents td:nth-child(11):before,
     .fax-documents td:nth-child(11):before {
         content: 'Actions:';
     }
-    .outgoing-documents td:nth-child(1):before {
+    .out-documents td:nth-child(1):before {
         content: 'Outgoing date:';
     }
-    .outgoing-documents td:nth-child(2):before {
+    .out-documents td:nth-child(2):before {
         content: 'Reg. number:';
     }
-    .outgoing-documents td:nth-child(3):before {
+    .out-documents td:nth-child(3):before {
         content: 'Index:';
     }
-    .outgoing-documents td:nth-child(4):before {
+    .out-documents td:nth-child(4):before {
         content: 'Type:';
     }
-    .outgoing-documents td:nth-child(5):before {
+    .out-documents td:nth-child(5):before {
         content: 'Theme:';
     }
-    .outgoing-documents td:nth-child(6):before {
+    .out-documents td:nth-child(6):before {
         content: 'Sent To:';
     }
-    .outgoing-documents td:nth-child(7):before {
+    .out-documents td:nth-child(7):before {
         content: 'Executor:';
     }
-    .outgoing-documents td:nth-child(8):before {
+    .out-documents td:nth-child(8):before {
         content: 'Signatory:';
     }
-    .outgoing-documents td:nth-child(9):before {
+    .out-documents td:nth-child(9):before {
         content: 'Notes:';
     }
-    .outgoing-documents td:nth-child(10):before {
+    .out-documents td:nth-child(10):before {
         content: 'Status:';
     }
-    .outgoing-documents td:nth-child(11):before {
+    .out-documents td:nth-child(11):before {
         content: 'Actions:';
     }
 }

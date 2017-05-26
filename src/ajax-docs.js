@@ -8,10 +8,15 @@ function loadTabContent(tabId) {
     let tableName;
     for (let i = 0, len = tabTables.length; i < len; i++) {
         tableName = tabTables[i];
-        getTable(tableName);
+        const section = document.createElement("section");
+        section.id = `${tableName}__container`;
+        section.classList.add(`${tableName.slice(-3)}-documents`);
+        tab.appendChild(section);
+        // tab.appendChild()
+        getTable(tableName, section);
     }
 
-    function getTable(tableName) {
+    function getTable(tableName, div) {
         let xhr = new XMLHttpRequest();
         xhr.open("GET", `./src/${tableName}.json`, true);
         xhr.onload = function() {
@@ -20,12 +25,12 @@ function loadTabContent(tabId) {
             /* AJAX request is asynchronous and because of it we must
             * pass tableName to renderHTML() as a parameter, in order to save it
             * in a closure of onload-callback*/
-            renderHTML(xhrData, tableName);
+            renderHTML(xhrData, tableName, div);
         };
         xhr.send();
     }
 
-    function renderHTML(tableData, tableName) {
+    function renderHTML(tableData, tableName, div) {
         const table = document.createElement("table");
         const tHead = document.createElement("thead");
         const tBody = document.createElement("tbody");
@@ -113,8 +118,8 @@ function loadTabContent(tabId) {
         table.appendChild(tBody);
 
         // Adding heading to the table
-        tab.appendChild(heading);
-        tab.appendChild(table);
+        div.appendChild(heading);
+        div.appendChild(table);
 
         // Init sort
         initSort(table.id);
