@@ -1,3 +1,8 @@
+/*Tables in a tab are displayed in the order, that they are placed
+ in the tabTables array. But here we make multiple asynchronous requests,
+ which may respond not in the same order, that they were made.
+ To resolve this we create section tags (with ids) for each table in the needed order*/
+
 function loadTabContent(tabId) {
     const tab = document.getElementById(tabId);
 
@@ -8,15 +13,20 @@ function loadTabContent(tabId) {
     let tableName;
     for (let i = 0, len = tabTables.length; i < len; i++) {
         tableName = tabTables[i];
+
+        // Creating a section for each table
         const section = document.createElement("section");
         section.id = `${tableName}__container`;
+
+        // Adding class for proper display on smartphones
         section.classList.add(`${tableName.slice(-3)}-documents`);
         tab.appendChild(section);
-        // tab.appendChild()
+
+        // Making AJAX request for each table and add table to appropriate section
         getTable(tableName, section);
     }
 
-    function getTable(tableName, div) {
+    function getTable(tableName, section) {
         let xhr = new XMLHttpRequest();
         xhr.open("GET", `./src/${tableName}.json`, true);
         xhr.onload = function() {
@@ -25,12 +35,13 @@ function loadTabContent(tabId) {
             /* AJAX request is asynchronous and because of it we must
             * pass tableName to renderHTML() as a parameter, in order to save it
             * in a closure of onload-callback*/
-            renderHTML(xhrData, tableName, div);
+            // setTimeout(renderHTML, 1000 * (Math.floor(Math.random() * 4) + 1), xhrData, tableName, section);
+            renderHTML(xhrData, tableName, section);
         };
         xhr.send();
     }
 
-    function renderHTML(tableData, tableName, div) {
+    function renderHTML(tableData, tableName, section) {
         const table = document.createElement("table");
         const tHead = document.createElement("thead");
         const tBody = document.createElement("tbody");
@@ -118,8 +129,8 @@ function loadTabContent(tabId) {
         table.appendChild(tBody);
 
         // Adding heading to the table
-        div.appendChild(heading);
-        div.appendChild(table);
+        section.appendChild(heading);
+        section.appendChild(table);
 
         // Init sort
         initSort(table.id);
