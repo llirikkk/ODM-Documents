@@ -33,7 +33,7 @@
     background-color: #a3c644;
 }
 .document-menu__new-doc:before {
-    content: url("../../images/newdoc.png");
+    content: url("../images/newdoc.png");
     padding-top: 4px;
 }
 
