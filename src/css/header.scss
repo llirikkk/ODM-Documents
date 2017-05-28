@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 /*Upper sharepoint bar*/
 .sharepoint-bar a {
     color: #fff;
@@ -16,7 +18,7 @@
 }
 .sharepoint-bar__logo-img {
     text-transform: uppercase;
-    font-family: "Oswald", sans-serif;
+    font-family: $heading-font;
     font-size: 16px;
     margin-left: 8px;
 }
@@ -123,7 +125,7 @@
 }
 .logo-bar__left h1 {
     color: #7ae6f7;
-    font-family: "Oswald", sans-serif;
+    font-family: $heading-font;
     font-size: 20px;
     margin-left: 20px;
 }

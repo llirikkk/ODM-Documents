@@ -1,3 +1,4 @@
+@import "_variables.scss";
 /*Menu*/
 aside {
     height: 100%;
@@ -5,7 +6,7 @@ aside {
 .menu {
     /*background-color: #39c2d7;*/
     width: 250px;
-    font-family: "Oswald", sans-serif;
+    font-family: $heading-font;
     font-size: 16px;
     text-transform: uppercase;
     /*padding: 10px 0;*/
