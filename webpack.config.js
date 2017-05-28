@@ -20,6 +20,11 @@ module.exports = {
             {
                 test: /\.png$/,
                 use: "file-loader?name=[name].[ext]&outputPath=images/"
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: "babel-loader"
             }
         ]
     },
