@@ -28,6 +28,10 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        compress: true,
+        stats: "errors-only"
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'ODM Documents',
