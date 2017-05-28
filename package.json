@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/llirikkk/ODM-Documents#readme",
   "devDependencies": {
+    "css-loader": "^0.28.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.18.1",
     "webpack": "^2.6.1"
   }
 }
