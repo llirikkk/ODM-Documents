@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -23,6 +24,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            title: 'ODM Documents',
+            hash: true,
+            template: './src/index.ejs'
+        }),
         new ExtractTextPlugin({
             filename: "app.css",
             disable: false,

@@ -30,7 +30,7 @@ export default function loadTabContent(tabId) {
 
     function getTable(tableName, section) {
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", `./json/${tableName}.json`, true);
+        xhr.open("GET", `../json/${tableName}.json`, true);
         xhr.onload = function() {
             const xhrData = JSON.parse(xhr.responseText);
 
