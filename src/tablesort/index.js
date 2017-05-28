@@ -1,4 +1,4 @@
-function initSort(...tableIDs) {
+export default function initSort(...tableIDs) {
     for (let i = 0, len = tableIDs.length; i < len; i++) {
         const table = document.getElementById(tableIDs[i]);
         const tBody = table.tBodies[0];

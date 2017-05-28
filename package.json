@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack -d",
+    "prod": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/llirikkk/ODM-Documents/issues"
   },
-  "homepage": "https://github.com/llirikkk/ODM-Documents#readme"
+  "homepage": "https://github.com/llirikkk/ODM-Documents#readme",
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  }
 }

@@ -3,7 +3,9 @@
  which may respond not in the same order, that they were made.
  To resolve this we create section tags (with ids) for each table in the needed order*/
 
-function loadTabContent(tabId) {
+import initSort from "../tablesort";
+
+export default function loadTabContent(tabId) {
     const tab = document.getElementById(tabId);
 
     // List of tables to be loaded
