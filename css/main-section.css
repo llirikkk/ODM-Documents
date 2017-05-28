@@ -148,6 +148,7 @@ input[type=search]{
 .tab-content th {
     vertical-align: bottom;
     text-transform: capitalize;
+    cursor: pointer;
 }
 .tab-content th:first-child {
     width: 60px;

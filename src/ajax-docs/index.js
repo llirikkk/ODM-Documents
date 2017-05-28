@@ -122,7 +122,6 @@ export default function loadTabContent(tabId) {
             }
             tBody.appendChild(tr);
         }
-        console.log(tBody);
 
         // Adding table with heading to the tab
         table.id = `${tableName}__table`;
