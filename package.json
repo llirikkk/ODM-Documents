@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack -d",
+    "dev": "webpack-dev-server",
     "prod": "npm run clean && webpack -p",
     "clean": "rimraf ./dist/*"
   },
