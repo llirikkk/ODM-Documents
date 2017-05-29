@@ -1,5 +1,16 @@
 @import "_variables.scss";
 
+$tab-links: (
+    created: "\f040",
+    under-approval: "\f017",
+    sent: "\f0c0"
+);
+
+@each $name, $value in $tab-links {
+    .tab-links__item-#{$name}:before {
+        content: $value;
+    }
+}
 .main-section {
     margin-top: 15px;
     margin-right: 15px;
@@ -87,7 +98,7 @@ input[type=search]{
     align-items: center;
     justify-content: flex-start;
     list-style: none;
-    background-color: #666;
+    background-color: $tabs-color;
 }
 .tab-links a {
     color: #fff;
@@ -103,18 +114,9 @@ input[type=search]{
     font-family: FontAwesome;
     padding-right: 13px;
 }
-.tab-links__item-created:before {
-    content: '\f040';
-}
-.tab-links__item-under-approval:before {
-    content: '\f017';
-}
 .tab-links__item_active > a {
     background-color: #fff;
-    color: #666;
-}
-.tab-links__item-sent:before {
-    content: '\f0c0';
+    color: $tabs-color;
 }
 /*End of Tabs section*/
 /*Main section*/
@@ -126,7 +128,7 @@ input[type=search]{
     font-size: 25px;
     line-height: 25px;
     font-family: $heading-font;
-    color: #666;
+    color: $tabs-color;
     text-transform: uppercase;
     margin-top: 14px;
     margin-bottom: 15px;

@@ -5,7 +5,7 @@
     color: #fff;
 }
 .sharepoint-bar {
-    background-color: #39c2d7;
+    background-color: $nav-color;
     color: #fff;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@
     font-family: FontAwesome;
 }
 .sharepoint-bar__user-profile {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: $main-font;
 }
 
 /*noinspection CssNoGenericFontName*/
@@ -75,7 +75,7 @@
     padding: 2px 8px;
 }
 .header-bottom-nav-bar__left .active {
-    background-color: #39c2d7;
+    background-color: $nav-color;
 
 }
 .header-bottom-nav-bar__left .active a {

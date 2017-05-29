@@ -1,16 +1,30 @@
 @import "_variables.scss";
+
+// Map of menu items and font-awesome-icons
+$menu-items: (
+    home: "\f015",
+    documents: "\f0f6",
+    calendar: "\f073",
+    archive: "\f187",
+    nomenclature: "\f0ca",
+    organizations: "\f0f2"
+);
+
+// Creating pseudo-elements for menu-items icons
+@each $name, $value in $menu-items {
+    .menu__item-#{$name}:before {
+        content: $value;
+    }
+}
 /*Menu*/
 aside {
     height: 100%;
 }
 .menu {
-    /*background-color: #39c2d7;*/
     width: 250px;
     font-family: $heading-font;
     font-size: 16px;
     text-transform: uppercase;
-    /*padding: 10px 0;*/
-
     float: left;
     box-sizing: border-box;
 }
@@ -18,14 +32,11 @@ aside {
     color: #fff;
 }
 .menu > li {
-    background-color: #39c2d7;
+    background-color: $nav-color;
     border-bottom: 1px solid #5ecbdc;
 }
 .menu li {
     list-style: none;
-    /*padding-left: 29px;*/
-    /*padding-top: 10px;*/
-    /*padding-bottom: 10px;*/
 }
 .menu a {
     display: block;
@@ -36,9 +47,6 @@ aside {
 .menu a > span {
     margin-right: 21px;
 }
-/*.menu__item_active {*/
-/*background-color: #31a5b7;*/
-/*}*/
 
 /*noinspection CssNoGenericFontName*/
 .menu a:before {
@@ -48,37 +56,12 @@ aside {
     display: inline-block;
     margin-right: 20px;
 }
-.menu__item-home:before {
-    content: "\f015";
-}
-.menu__item-documents:before {
-    content: "\f0f6";
-}
-.menu__item-calendar:before {
-    content: "\f073";
-}
-.menu__item-archive:before {
-    content: "\f187";
-}
-.menu__item-nomenclature:before {
-    content: "\f0ca";
-}
-.menu__item-organizations:before {
-    content: "\f0f2";
-}
 #menu__item_has-submenu {
     border-bottom: none;
 }
 #menu__item_has-submenu > a {
     position: relative;
 }
-/*#menu__item_has-submenu > a::after {*/
-/*content: "\f0d7";*/
-/*font-family: FontAwesome;*/
-/*position: absolute;*/
-/*top: 30%;*/
-/*right: 25px;*/
-/*}*/
 .menu__submenu {
     background-color: #e1f6f9;
 }
@@ -112,9 +95,6 @@ aside {
 .menu label {
     color: #fff;
     display: block;
-    /*padding-left: 29px;*/
-    /*padding-top: 10px;*/
-    /*padding-bottom: 10px;*/
     cursor: pointer;
     position: relative;
     border-bottom: 1px solid #5ecbdc;
@@ -139,7 +119,7 @@ aside {
     background-color: #31a5b7;
 }
 .menu__submenu a:hover {
-    background-color: #39c2d7;
+    background-color: $nav-color;
     color: #fff;
 }
 

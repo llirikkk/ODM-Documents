@@ -34,14 +34,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'ODM Documents',
             hash: true,
             template: './src/index.ejs'
         }),
         new ExtractTextPlugin({
             filename: "app.css",
-            disable: false,
-            allChunks: true
+            disable: false
         })
     ]
 };

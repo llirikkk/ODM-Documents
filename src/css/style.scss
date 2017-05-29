@@ -13,7 +13,7 @@ html {
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
 }
 body {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: $main-font;
     font-size: 14px;
 }
 a {
