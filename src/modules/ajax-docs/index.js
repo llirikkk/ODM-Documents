@@ -135,5 +135,17 @@ export default function loadTabContent(tabId) {
 
         // Init sort
         initSort(table.id);
+
+        function showHeadings(mql) {
+            if (mql.matches) {
+                console.log(docProps);
+            }
+        }
+
+        const mql = window.matchMedia("screen and (max-width: 630px)");
+
+        mql.addListener(showHeadings); // Добавим прослушку на смену результата
+
+        showHeadings(mql);
     }
 }
