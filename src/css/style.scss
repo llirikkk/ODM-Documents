@@ -1,9 +1,9 @@
-@import "_variables.scss";
-@import "header.scss";
-@import "nav.scss";
-@import "main-section.scss";
-@import "footer.scss";
-@import "media.scss";
+@import "_variables";
+@import "header";
+@import "nav";
+@import "main-section";
+@import "footer";
+@import "media";
 
 * {
     margin: 0;
@@ -22,15 +22,6 @@ body {
 a {
     text-decoration: none;
 }
-/*.main-section {*/
-    /*min-width: 585px;*/
-/*}*/
-/*body > header {*/
-    /*min-width: 850px;*/
-/*}*/
-/*body > footer {*/
-    /*min-width: 850px;*/
-/*}*/
 header ul li {
     display: block;
     float: left;

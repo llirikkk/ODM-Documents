@@ -1,0 +1,22 @@
+/*Logo bar*/
+.logo-bar {
+  background-color: #464547;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+.logo-bar__left  {
+  display: flex;
+  align-items: center;
+  h1 {
+    color: #7ae6f7;
+    font-family: $heading-font;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+}
+.logo-bar__search {
+  color: #ccc;
+  font-size: 22px;
+}

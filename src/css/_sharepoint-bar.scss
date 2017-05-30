@@ -1,0 +1,113 @@
+@import "_variables.scss";
+
+$nav-bar_items: (
+        share: "\f1e0",
+        follow: "\f006",
+        edit: "\f040",
+);
+
+/*Top sharepoint bar*/
+.sharepoint-bar {
+  background-color: $nav-color;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  a {
+    color: #fff;
+  }
+  ul li {
+    margin: 0 8px;
+  }
+}
+.sharepoint-bar__logo {
+  display: flex;
+  align-items: center;
+}
+.sharepoint-bar__logo-img {
+  text-transform: uppercase;
+  font-family: $heading-font;
+  font-size: 16px;
+  margin-left: 8px;
+}
+.sharepoint-bar__nav {
+  display: flex;
+  align-items: center;
+}
+.sharepoint-bar__nav-links {
+  padding-right: 30px;
+}
+
+/*noinspection CssNoGenericFontName*/
+.sharepoint-bar__nav-user {
+  background-color: #eee;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-family: FontAwesome;
+
+  a {
+    color: #464547;
+  }
+}
+.sharepoint-bar__user-profile {
+  font-family: $main-font;
+  &:after {
+    font-family: FontAwesome;
+    content: '\f0d7'; /*caret-down*/
+    margin-left: 12px;
+  }
+}
+
+/*End of Top sharepoint bar*/
+/*Bottom sharepoint bar*/
+.header-bottom-nav-bar {
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:5px 20px;
+  text-transform: uppercase;
+}
+.header-bottom-nav-bar__left {
+  display: flex;
+  align-items: center;
+  li {
+    padding: 2px 8px;
+  }
+  a {
+    color: #464547;
+  }
+  .active {
+    background-color: $nav-color;
+    a {
+      color: #fff;
+    }
+  }
+}
+.header-bottom-nav-bar__right {
+  li {
+    padding-left: 16px;
+  }
+  a {
+    color: #999;
+    &:before {
+      font-family: FontAwesome;
+      margin-right: 4px;
+    }
+  }
+}
+// Creating pseudo-elements for menu-items icons
+@each $name, $value in $nav-bar_items {
+  .nav-bar__item-#{$name}:before {
+    content: $value;
+  }
+}
+
+/*noinspection CssNoGenericFontName*/
+.nav-bar__item-expand {
+  font-family: FontAwesome;
+}
+/*End of Bottom sharepoint bar*/
