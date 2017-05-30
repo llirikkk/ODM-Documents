@@ -1,8 +1,8 @@
-@import "_variables";
-@import "header";
-@import "nav";
-@import "main-section";
-@import "footer";
+@import "base/_variables";
+@import "modules/header/_header";
+@import "modules/nav/_nav";
+@import "modules/main-section/_main-section";
+@import "modules/footer/_footer";
 @import "media";
 
 * {

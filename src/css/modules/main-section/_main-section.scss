@@ -1,4 +1,4 @@
-@import "_variables.scss";
+@import "../../base/_variables";
 
 $tab-links: (
     created: "\f040",
@@ -47,7 +47,8 @@ $tab-links: (
     background-color: #a3c644;
 }
 .document-menu__new-doc:before {
-    content: url("../images/newdoc.png");
+    //noinspection CssUnknownTarget
+    content: url("./modules/main-section/images/newdoc.png");
     padding-top: 4px;
 }
 

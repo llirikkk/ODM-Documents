@@ -1,0 +1,57 @@
+@import "../../base/_variables";
+// Map of menu items and font-awesome-icons
+$menu-items: (
+        home: "\f015",
+        documents: "\f0f6",
+        calendar: "\f073",
+        archive: "\f187",
+        nomenclature: "\f0ca",
+        organizations: "\f0f2"
+);
+
+// Creating pseudo-elements for menu-items icons
+@each $name, $value in $menu-items {
+  .menu__item-#{$name}:before {
+    content: $value;
+  }
+}
+/*Menu*/
+aside {
+  height: 100%;
+}
+.menu {
+  width: 250px;
+  font-family: $heading-font;
+  font-size: 16px;
+  text-transform: uppercase;
+  float: left;
+  box-sizing: border-box;
+  a {
+    color: #fff;
+    display: block;
+    padding-left: 29px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &:hover {
+      background-color: #31a5b7;
+    }
+    &:before {
+      font-family: FontAwesome;
+      font-size: 19px;
+      width: 21px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    & > span {
+      margin-right: 21px;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  & > li {
+    background-color: $nav-color;
+    border-bottom: 1px solid #5ecbdc;
+  }
+
+}
