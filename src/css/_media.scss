@@ -1,33 +1,3 @@
-@media screen and (max-width: 1395px) {
-    .menu {
-        display: none;
-    }
-    .main-section {
-        margin-left: 15px;
-    }
-    .mobile_nav {
-        position: absolute;
-        display: inline-block;
-        font-size: 25px;
-        color: #ccc;
-        padding: 20px;
-        top: 60px;
-    }
-    .menu {
-        position: absolute;
-        top: 130px;
-        /*padding-top: 40px;*/
-        padding-right: 30px;
-        padding-bottom: 30px;
-        z-index: 1000;
-    }
-    .logo-bar__left {
-        margin-left: 35px;
-    }
-    #toggle__mobile-nav:checked ~ .menu {
-        display: block;
-    }
-}
 @media screen and (max-width: 827px){
     .document-menu li a{
         font-size: 0;

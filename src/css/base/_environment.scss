@@ -1,0 +1,26 @@
+$heading-font: "Oswald", sans-serif;
+$main-font: "Source Sans Pro", sans-serif;
+
+$nav-color: #39c2d7;
+$tabs-color: #666;
+
+$breakpoints: (
+        toggle_mobile-nav : 1395px,
+        change_doc-menu: 827px,
+        tables_to_cards : 630px,
+        flexible_search: 530px
+);
+
+@mixin media($breakpoint, $breakpoints: $breakpoints) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint: map-get($breakpoints, $breakpoint);
+    @media screen and (max-width: #{$breakpoint}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+

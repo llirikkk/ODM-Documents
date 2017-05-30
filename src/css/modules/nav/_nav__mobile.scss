@@ -1,8 +1,23 @@
+@import "../../base/_environment";
+
 .mobile_nav {
   display: none;
+  @include media(toggle_mobile-nav) {
+    position: absolute;
+    display: inline-block;
+    font-size: 25px;
+    color: #ccc;
+    padding: 20px;
+    top: 60px;
+  }
 }
 #toggle__mobile-nav {
   position: absolute;
   top: -9999px;
   left: -9999px;
+  @include media(toggle_mobile-nav) {
+    &:checked ~ .menu {
+      display: block;
+    }
+  }
 }

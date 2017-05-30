@@ -1,4 +1,4 @@
-@import "../../base/_variables";
+@import "../../base/_environment";
 @import "main-section__doc-menu";
 @import "main-section__search";
 @import "main-section__tabs";
@@ -13,7 +13,7 @@
         justify-content: space-between;
         margin-bottom: 15px;
     }
-    h1 {
+  h1 {
         font-size: 25px;
         line-height: 25px;
         font-family: $heading-font;
@@ -21,5 +21,8 @@
         text-transform: uppercase;
         margin-top: 14px;
         margin-bottom: 15px;
+    }
+    @include media(toggle_mobile-nav) {
+      margin-left: 15px;
     }
 }

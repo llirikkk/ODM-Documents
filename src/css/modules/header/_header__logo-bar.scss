@@ -1,3 +1,5 @@
+@import "../../base/environment";
+
 /*Logo bar*/
 .logo-bar {
   background-color: #464547;
@@ -14,6 +16,9 @@
     font-family: $heading-font;
     font-size: 20px;
     margin-left: 20px;
+  }
+  @include media(toggle_mobile-nav) {
+    margin-left: 35px;
   }
 }
 .logo-bar__search {
