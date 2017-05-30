@@ -7,15 +7,27 @@ $tabs-color: #666;
 $breakpoints: (
         toggle_mobile-nav : 1395px,
         change_doc-menu: 827px,
-        tables_to_cards : 630px,
+        tables_to_cards: 630px,
         flexible_search: 530px
 );
 
-@mixin media($breakpoint, $breakpoints: $breakpoints) {
+@mixin media($breakpoint, $orientation: "") {
   @if map-has-key($breakpoints, $breakpoint) {
     $breakpoint: map-get($breakpoints, $breakpoint);
-    @media screen and (max-width: #{$breakpoint}) {
-      @content;
+    @if $orientation == portrait or $orientation == landscape {
+      @media screen and (max-width: #{$breakpoint}) and (orientation : $orientation) {
+        @content;
+      }
+    }
+    @else {
+      @if orientation = "" {
+        @media screen and (max-width: #{$breakpoint})  {
+          @content;
+        }
+      }
+      @else {
+        @warn "Wrong orientation: `#{$orientation}`";
+      }
     }
   }
   @else {

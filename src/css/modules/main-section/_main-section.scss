@@ -21,8 +21,16 @@
         text-transform: uppercase;
         margin-top: 14px;
         margin-bottom: 15px;
+        @include media(tables_to_cards) {
+          font-size: 22px;
+          margin-bottom: 14px;
+        }
     }
-    @include media(toggle_mobile-nav) {
+  @include media(toggle_mobile-nav) {
       margin-left: 15px;
-    }
+  }
+  @include media(tables_to_cards) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

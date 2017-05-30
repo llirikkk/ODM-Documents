@@ -17,17 +17,28 @@ $tab-links: (
   justify-content: flex-start;
   list-style: none;
   background-color: $tabs-color;
-}
-.tab-links a {
-  color: #fff;
-  text-transform: uppercase;
-  font-family: $heading-font;
-  font-size: 15px;
-  padding: 9px 20px;
-  display: block;
-  &:before {
-    font-family: FontAwesome;
-    padding-right: 13px;
+  a {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $heading-font;
+    font-size: 15px;
+    padding: 9px 20px;
+    display: block;
+    @include media(tables_to_cards) {
+      padding: 5px;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: center;
+    }
+    &:before {
+      font-family: FontAwesome;
+      padding-right: 13px;
+      @include media(tables_to_cards) {
+        display: none;
+        margin-right: 5px;
+        padding-right: 0;
+      }
+    }
   }
 }
 .tab-links__item_active > a {

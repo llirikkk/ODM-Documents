@@ -10,6 +10,9 @@
     padding: 20px;
     top: 60px;
   }
+  @include media(tables_to_cards) {
+    top: 25px;
+  }
 }
 #toggle__mobile-nav {
   position: absolute;

@@ -1,3 +1,5 @@
+@import "../../base/_environment";
+
 $mark-colors: (
         signed: #a3c644,
         awaits: #ecc134,
@@ -25,7 +27,7 @@ $mark-colors: (
 .tab-content {
   overflow: auto;
   h1 {
-    margin-left: 21px;
+    margin-left: 22px;
   }
   table {
     border-collapse: collapse;
@@ -34,6 +36,29 @@ $mark-colors: (
     margin-right: 0;
     table-layout: fixed;
     min-width: 1100px;
+    @include media(tables_to_cards) {
+      min-width: 270px;
+      thead {
+        display: none;
+      }
+    }
+    tbody {
+      tr {
+        @include media(tables_to_cards, portrait) {
+          display: block;
+          float: left;
+          width: 100%;
+        }
+        @include media(tables_to_cards, landscape) {
+          display: block;
+          float: left;
+          width: 50%;
+          &:nth-child(2n) + tr {
+            background-color: #f1f1f1;
+          }
+        }
+      }
+    }
     tr:nth-child(2n) {
       background-color: #f1f1f1;
     }
@@ -57,6 +82,15 @@ $mark-colors: (
       white-space: nowrap;
       padding: 12px 22px;
       text-align: left;
+      @include media(tables_to_cards) {
+        display: block;
+        padding: 5px 22px;
+      }
+      &:before {
+        font-weight: bold;
+        display: inline-block;
+        width: 140px;
+      }
     }
   }
 }

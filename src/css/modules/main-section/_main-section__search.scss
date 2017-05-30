@@ -1,5 +1,12 @@
+@import "../../base/environment";
+
 .section-search {
   position: relative;
+  @include media(flexible_search) {
+    width: 100%;
+    position: absolute;
+    right: 0;
+  }
 }
 /*noinspection CssNoGenericFontName*/
 .section-search__buttons {
@@ -20,4 +27,19 @@ input[type=search]{
   width: 390px;
   padding-left: 12px;
   height: 35px;
+  @include media(change_doc-menu) {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  @include media(flexible_search) {
+    position: absolute;
+    width: calc(100% - 112px);
+    right: 0;
+    transition: width 0.3s ease;
+    -webkit-appearance: none;
+    border-radius: 0;
+    &:focus {
+      width: calc(100% - 2px);
+    }
+  }
 }

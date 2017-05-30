@@ -1,6 +1,13 @@
+@import "../../base/environment";
+
 .document-menu {
   li {
     margin-right: 5px;
+    @include media(tables_to_cards) {
+      &:first-child {
+        margin-left: 2px;
+      }
+    }
     a {
       color: #fff;
       display: flex;
@@ -10,9 +17,22 @@
       width: 190px;
       padding: 0 19px;
       box-sizing: border-box;
+      @include media(change_doc-menu) {
+        font-size: 0;
+        width: 50px;
+        padding: 0;
+        &:before {
+          margin-left: 7px;
+          margin-bottom: 2px;
+        }
+      }
       &:after {
         font-family: FontAwesome;
         content: '\f0d7';
+        @include media(change_doc-menu) {
+          font-size: 14px;
+          margin-right: 7px;
+        }
       }
     }
   }

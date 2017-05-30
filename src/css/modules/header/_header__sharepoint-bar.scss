@@ -5,8 +5,30 @@ $nav-bar_items: (
         follow: "\f006",
         edit: "\f040",
 );
+// Creating pseudo-elements for menu-items icons
+@each $name, $value in $nav-bar_items {
+  .nav-bar__item-#{$name}:before {
+    content: $value;
+  }
+}
 
-/*Top sharepoint bar*/
+.sharepoint-bar-wrap {
+  @include media(tables_to_cards) {
+    position: absolute;
+    width: 100%;
+    background-color: $nav-color;
+    height: 26px;
+    overflow: hidden;
+    z-index: 1050;
+    transition: height 0.3s ease;
+    &:hover {
+      height: 200px;
+      .sharepoint-bar__logo:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
 .sharepoint-bar {
   background-color: $nav-color;
   color: #fff;
@@ -20,10 +42,27 @@ $nav-bar_items: (
   ul li {
     margin: 0 8px;
   }
+  @include media(tables_to_cards) {
+    position: absolute;
+    width: 100%;
+    padding-left: 0;
+    display: block;
+  }
 }
 .sharepoint-bar__logo {
   display: flex;
   align-items: center;
+  @include media(tables_to_cards) {
+    width: 100%;
+    justify-content: center;
+    &:after {
+      content: '\f107';
+      font-family: FontAwesome;
+      font-size: 25px;
+      margin-left: 15px;
+      transition-duration: 0.3s;
+    }
+  }
 }
 .sharepoint-bar__logo-img {
   text-transform: uppercase;
@@ -34,9 +73,28 @@ $nav-bar_items: (
 .sharepoint-bar__nav {
   display: flex;
   align-items: center;
+  @include media(tables_to_cards) {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }
 .sharepoint-bar__nav-links {
   padding-right: 30px;
+  @include media(tables_to_cards) {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 30px;
+    left: 0;
+    padding: 0;
+    text-align: center;
+    li {
+      float: none;
+    }
+  }
 }
 
 /*noinspection CssNoGenericFontName*/
@@ -47,9 +105,14 @@ $nav-bar_items: (
   align-items: center;
   padding: 0 10px;
   font-family: FontAwesome;
-
   a {
     color: #464547;
+    @include media(tables_to_cards) {
+      color: #fff;
+    }
+  }
+  @include media(tables_to_cards) {
+    background-color: transparent;
   }
 }
 .sharepoint-bar__user-profile {
@@ -60,9 +123,6 @@ $nav-bar_items: (
     margin-left: 12px;
   }
 }
-
-/*End of Top sharepoint bar*/
-/*Bottom sharepoint bar*/
 .header-bottom-nav-bar {
   background-color: #eee;
   display: flex;
@@ -70,6 +130,14 @@ $nav-bar_items: (
   align-items: center;
   padding:5px 20px;
   text-transform: uppercase;
+  @include media(tables_to_cards) {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    padding: 0;
+  }
 }
 .header-bottom-nav-bar__left {
   display: flex;
@@ -79,12 +147,18 @@ $nav-bar_items: (
   }
   a {
     color: #464547;
+    @include media(tables_to_cards) {
+      color: #fff;
+    }
   }
   .active {
     background-color: $nav-color;
     a {
       color: #fff;
     }
+  }
+  @include media(tables_to_cards) {
+    justify-content: center;
   }
 }
 .header-bottom-nav-bar__right {
@@ -97,12 +171,13 @@ $nav-bar_items: (
       font-family: FontAwesome;
       margin-right: 4px;
     }
+    @include media(tables_to_cards) {
+      color: #fff;
+    }
   }
-}
-// Creating pseudo-elements for menu-items icons
-@each $name, $value in $nav-bar_items {
-  .nav-bar__item-#{$name}:before {
-    content: $value;
+  @include media(tables_to_cards) {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -110,4 +185,3 @@ $nav-bar_items: (
 .nav-bar__item-expand {
   font-family: FontAwesome;
 }
-/*End of Bottom sharepoint bar*/
