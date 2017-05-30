@@ -1,3 +1,5 @@
+@import "../../base/_variables";
+
 /*Sub menu*/
 #menu__item_has-submenu {
   border-bottom: none;
@@ -5,42 +7,6 @@
     position: relative;
   }
 }
-.menu__submenu {
-  background-color: #e1f6f9;
-  max-height: 0;
-  overflow: hidden;
-  transition: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  a {
-    color: #7b7b7b;
-  }
-}
-.menu input[type=checkbox]{
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-.menu input[type=checkbox]:checked ~ .menu__submenu{
-  max-height: 500px;
-  border-bottom: 1px solid #5ecbdc;
-}
-.menu input[type=checkbox]:checked ~ label{
-  background-color: #31a5b7;
-}
-
-.menu input[type=checkbox]:checked ~ label::after {
-  transform: rotate(180deg);
-}
-.menu label {
-  color: #fff;
-  display: block;
-  cursor: pointer;
-  position: relative;
-  border-bottom: 1px solid #5ecbdc;
-}
-.menu label span {
-  margin-right: 22px;
-}
-
 /*noinspection CssNoGenericFontName*/
 .menu__item_submenu::after {
   content: "\f0d7";
@@ -50,12 +16,47 @@
   right: 25px;
   transition-duration: 0.4s;
 }
-.menu label:hover {
-  background-color: #31a5b7;
+.menu__submenu {
+  background-color: #e1f6f9;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  a {
+    color: #7b7b7b;
+    &:hover {
+      background-color: $nav-color;
+      color: #fff;
+    }
+  }
 }
-.menu__submenu a:hover {
-  background-color: $nav-color;
-  color: #fff;
-}
+.menu input[type=checkbox]{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  &:checked {
+    & ~ .menu__submenu{
+      max-height: 500px;
+      border-bottom: 1px solid #5ecbdc;
+    }
+    & ~ label{
+      background-color: #31a5b7;
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
 
-/*End of Dropdown menu*/
+  }
+}
+.menu label {
+  color: #fff;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #5ecbdc;
+  span {
+    margin-right: 22px;
+  }
+  &:hover {
+    background-color: #31a5b7;
+  }
+}
