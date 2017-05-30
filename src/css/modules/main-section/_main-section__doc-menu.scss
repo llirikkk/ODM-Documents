@@ -1,0 +1,38 @@
+.document-menu {
+  li {
+    margin-right: 5px;
+    a {
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 35px;
+      width: 190px;
+      padding: 0 19px;
+      box-sizing: border-box;
+      &:after {
+        font-family: FontAwesome;
+        content: '\f0d7';
+      }
+    }
+  }
+}
+.document-menu__new-doc {
+  background-color: #a3c644;
+  &:before {
+    //noinspection CssUnknownTarget
+    content: url("./modules/main-section/images/newdoc.png");
+    padding-top: 4px;
+  }
+}
+.document-menu__attach-doc {
+  background-color: #ecc134;
+  &:before {
+    font-family: FontAwesome;
+    content: '\f0c6';
+    font-size: 20px;
+  }
+  .fa-paperclip {
+    font-size: 20px;
+  }
+}

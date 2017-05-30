@@ -1,239 +1,25 @@
 @import "../../base/_variables";
+@import "main-section__doc-menu";
+@import "main-section__search";
+@import "main-section__tabs";
 
-$tab-links: (
-    created: "\f040",
-    under-approval: "\f017",
-    sent: "\f0c0"
-);
-
-@each $name, $value in $tab-links {
-    .tab-links__item-#{$name}:before {
-        content: $value;
-    }
-}
 .main-section {
     margin-top: 15px;
     margin-right: 15px;
     margin-left: 265px;
     padding-bottom: 60px;
-}
-/*Main section Header*/
-/*Section Buttons*/
-.main-section > header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-.document-menu li {
-    margin-right: 5px;
-}
-.document-menu li a {
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 35px;
-    width: 190px;
-    padding: 0 19px;
-    box-sizing: border-box;
-}
-
-.document-menu__attach-doc .fa-paperclip {
-    font-size: 20px;
-}
-
-
-.document-menu__new-doc {
-    background-color: #a3c644;
-}
-.document-menu__new-doc:before {
-    //noinspection CssUnknownTarget
-    content: url("./modules/main-section/images/newdoc.png");
-    padding-top: 4px;
-}
-
-/*noinspection CssNoGenericFontName*/
-.document-menu a:after {
-    font-family: FontAwesome;
-    content: '\f0d7';
-}
-
-/*noinspection CssNoGenericFontName*/
-.document-menu__attach-doc:before {
-    font-family: FontAwesome;
-    content: '\f0c6';
-    font-size: 20px;
-}
-.document-menu__attach-doc {
-    background-color: #ecc134;
-}
-/*End of Section Buttons*/
-/*Section Search*/
-.section-search {
-    position: relative;
-}
-
-/*noinspection CssNoGenericFontName*/
-.section-search__buttons {
-    font-family: FontAwesome;
-    position: absolute;
-    top: 8px;
-    right: 6px;
-    display: flex;
-    align-items: center;
-    color: #acacac;
-    font-size: 16px;
-}
-.section-search__buttons .fa-search {
-    margin: 0 5px;
-    font-size: 17px;
-}
-input[type=search]{
-    width: 390px;
-    padding-left: 12px;
-    height: 35px;
-}
-/*End of Section search*/
-/*Tabs section*/
-.tab-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    list-style: none;
-    background-color: $tabs-color;
-}
-.tab-links a {
-    color: #fff;
-    text-transform: uppercase;
-    font-family: $heading-font;
-    font-size: 15px;
-    padding: 9px 20px;
-    display: block;
-}
-
-/*noinspection CssNoGenericFontName*/
-.tab-links a:before {
-    font-family: FontAwesome;
-    padding-right: 13px;
-}
-.tab-links__item_active > a {
-    background-color: #fff;
-    color: $tabs-color;
-}
-/*End of Tabs section*/
-/*Main section*/
-
-.main-section .tabs {
-    border: 1px solid #d3d3d3;
-}
-.main-section h1 {
-    font-size: 25px;
-    line-height: 25px;
-    font-family: $heading-font;
-    color: $tabs-color;
-    text-transform: uppercase;
-    margin-top: 14px;
-    margin-bottom: 15px;
-}
-.tabs {
-    position: relative;
-}
-.tab-content_hide {
-    display: none;
-}
-.tab-content {
-    overflow: auto;
-}
-.tab-content th, td {
-    padding: 12px 22px;
-    text-align: left;
-}
-.tab-content td {
-    white-space: nowrap;
-}
-.tab-content th {
-    vertical-align: bottom;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-.tab-content th:first-child {
-    width: 60px;
-}
-.tab-content th:last-child {
-    width: 60px;
-}
-.tab-content th:nth-last-child(2){
-    width: 60px;
-}
-.tab-content h1 {
-    margin-left: 21px;
-}
-.tab-content table {
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    width: 100%;
-    margin-right: 0;
-    table-layout: fixed;
-    min-width: 1100px;
-}
-.tab-content table tr:nth-child(2n) {
-    background-color: #f1f1f1;
-}
-.table-mark {
-    color: #fff;
-    display: inline-block;
-    /*padding: 4px 0px;*/
-    width: 65px;
-    line-height: 20px;
-    text-align: center;
-}
-.table-mark_signed {
-    background-color: #a3c644;
-}
-.table-mark_awaits {
-    background-color: #ecc134;
-}
-.table-mark_cancelled {
-    background-color: #b32746;
-}
-.table-mark_approved {
-    background-color: #39b7ac;
-}
-.table-mark_held {
-    background-color: #999999;
-}
-.table-mark_changed {
-    background-color: #937ebd;
-}
-.table-mark_deleted {
-    background-color: #eb6a5a;
-}
-.th-sorted {
-    position: relative;
-    color: #36c3d8;
-}
-/*.th-sorted a {*/
-    /*color: #36c3d8;*/
-    /*display: inline-block;*/
-    /*position: relative;*/
-/*}*/
-.th-sorted::after {
-    content: "";
-    position: absolute;
-    background-color: #7ae6f7;
-    height: 3px;
-    width: 90%;
-    bottom: 0;
-    left: 15px;
-}
-.th-sorted::before {
-    content: "\f107";
-    font-family: FontAwesome;
-    position: absolute;
-    right: 0;
-    bottom: 12%;
-    font-size: 15px;
-}
-.th-sorted_up::before {
-    transform: rotate(180deg);;
+    & > header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    h1 {
+        font-size: 25px;
+        line-height: 25px;
+        font-family: $heading-font;
+        color: $tabs-color;
+        text-transform: uppercase;
+        margin-top: 14px;
+        margin-bottom: 15px;
+    }
 }

@@ -1,0 +1,36 @@
+@import "../../base/_variables";
+
+$tab-links: (
+        created: "\f040",
+        under-approval: "\f017",
+        sent: "\f0c0"
+);
+
+@each $name, $value in $tab-links {
+  .tab-links__item-#{$name}:before {
+    content: $value;
+  }
+}
+.tab-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  background-color: $tabs-color;
+}
+.tab-links a {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: $heading-font;
+  font-size: 15px;
+  padding: 9px 20px;
+  display: block;
+  &:before {
+    font-family: FontAwesome;
+    padding-right: 13px;
+  }
+}
+.tab-links__item_active > a {
+  background-color: #fff;
+  color: $tabs-color;
+}

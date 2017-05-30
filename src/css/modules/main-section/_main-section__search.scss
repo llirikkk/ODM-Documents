@@ -1,0 +1,23 @@
+.section-search {
+  position: relative;
+}
+/*noinspection CssNoGenericFontName*/
+.section-search__buttons {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 8px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  color: #acacac;
+  font-size: 16px;
+  .fa-search {
+    margin: 0 5px;
+    font-size: 17px;
+  }
+}
+input[type=search]{
+  width: 390px;
+  padding-left: 12px;
+  height: 35px;
+}

@@ -1,0 +1,88 @@
+$mark-colors: (
+        signed: #a3c644,
+        awaits: #ecc134,
+        cancelled: #b32746,
+        approved: #39b7ac,
+        held: #999999,
+        changed: #937ebd,
+        deleted: #eb6a5a
+);
+@each $name, $value in $mark-colors {
+  .table-mark_#{$name} {
+    background-color: $value;
+  }
+}
+.table-mark {
+  color: #fff;
+  display: inline-block;
+  width: 65px;
+  line-height: 20px;
+  text-align: center;
+}
+.tab-content_hide {
+  display: none;
+}
+.tab-content {
+  overflow: auto;
+  h1 {
+    margin-left: 21px;
+  }
+  table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-right: 0;
+    table-layout: fixed;
+    min-width: 1100px;
+    tr:nth-child(2n) {
+      background-color: #f1f1f1;
+    }
+    th {
+      padding: 12px 22px;
+      text-align: left;
+      vertical-align: bottom;
+      text-transform: capitalize;
+      cursor: pointer;
+      &:first-child {
+        width: 60px;
+      }
+      &:last-child {
+        width: 60px;
+      }
+      &:nth-last-child(2){
+        width: 60px;
+      }
+    }
+    td {
+      white-space: nowrap;
+      padding: 12px 22px;
+      text-align: left;
+    }
+  }
+}
+.th-sorted {
+  position: relative;
+  color: #36c3d8;
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: #7ae6f7;
+    height: 3px;
+    width: 90%;
+    bottom: 0;
+    left: 15px;
+  }
+  &:before {
+    content: "\f107";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0;
+    bottom: 12%;
+    font-size: 15px;
+  }
+}
+.th-sorted_up {
+  &:before {
+    transform: rotate(180deg);;
+  }
+}
