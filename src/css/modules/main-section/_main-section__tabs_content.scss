@@ -91,6 +91,15 @@ $mark-colors: (
         display: inline-block;
         width: 140px;
       }
+      .doc-heading {
+        display: none;
+        @include media(tables_to_cards) {
+          font-weight: bold;
+          display: inline-block;
+          width: 140px;
+          text-transform: capitalize;
+        }
+      }
     }
   }
 }

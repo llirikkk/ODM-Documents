@@ -86,6 +86,14 @@ export default function loadTabContent(tabId) {
 
             for (let j = 0, len = docsArray[i].length; j < len; j++) {
                 const td = document.createElement("td");
+
+                // Adding headings, visible only at the breakpoint, when tables are turned to cards
+                let heading = document.createElement("span");
+                heading.classList.add("doc-heading");
+                heading.textContent = docProps[j];
+                td.appendChild(heading);
+
+                // Receiving document properties
                 const docProp = docsArray[i][j][docProps[j]];
 
                 // Applying styles to table marks
@@ -116,7 +124,7 @@ export default function loadTabContent(tabId) {
                     span.innerHTML = docProp;
                     td.appendChild(span);
                 } else {
-                    td.textContent = docProp;
+                    td.innerHTML += docProp;
                 }
                 tr.appendChild(td)
             }
@@ -135,17 +143,5 @@ export default function loadTabContent(tabId) {
 
         // Init sort
         initSort(table.id);
-
-        function showHeadings(mql) {
-            if (mql.matches) {
-                console.log(docProps);
-            }
-        }
-
-        const mql = window.matchMedia("screen and (max-width: 630px)");
-
-        mql.addListener(showHeadings); // Добавим прослушку на смену результата
-
-        showHeadings(mql);
     }
 }
