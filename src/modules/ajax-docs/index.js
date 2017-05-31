@@ -99,28 +99,7 @@ export default function loadTabContent(tabId) {
                 // Applying styles to table marks
                 if (j === markIndex) {
                     let span = document.createElement("span");
-                    switch(docProp.toLowerCase()) {
-                        case "signed":
-                            span.classList.add("table-mark", "table-mark_signed");
-                            break;
-                        case "awaits":
-                            span.classList.add("table-mark", "table-mark_awaits");
-                            break;
-                        case "cancelled":
-                            span.classList.add("table-mark", "table-mark_cancelled");
-                            break;
-                        case "approved":
-                            span.classList.add("table-mark", "table-mark_approved");
-                            break;
-                        case "held":
-                            span.classList.add("table-mark", "table-mark_held");
-                            break;
-                        case "changed":
-                            span.classList.add("table-mark", "table-mark_changed");
-                            break;
-                        case "deleted":
-                            span.classList.add("table-mark", "table-mark_deleted");
-                    }
+                    span.classList.add("table-mark",`table-mark_${docProp.toLowerCase()}`);
                     span.innerHTML = docProp;
                     td.appendChild(span);
                 } else {
