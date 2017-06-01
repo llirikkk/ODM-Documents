@@ -9,6 +9,10 @@
     color: #ccc;
     padding: 20px;
     top: 60px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+    }
   }
   @include media(tables_to_cards) {
     top: 25px;
