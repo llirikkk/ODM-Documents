@@ -140,6 +140,12 @@ $nav-bar_items: (
   align-items: center;
   li {
     padding: 2px 8px;
+    &:hover {
+      background-color: $nav-color;
+      a {
+        color: #fff;
+      }
+    }
   }
   a {
     color: #464547;
@@ -163,6 +169,9 @@ $nav-bar_items: (
   }
   a {
     color: #999;
+    &:hover {
+      color: #464547;
+    }
     &:before {
       @include fontAwesome();
       margin-right: 4px;
