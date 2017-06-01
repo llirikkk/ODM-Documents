@@ -39,9 +39,15 @@ $tab-links: (
         padding-right: 0;
       }
     }
+    &:hover {
+      background-color: lighten($tabs-color, 7%);
+    }
   }
 }
 .tab-links__item_active > a {
   background-color: #fff;
   color: $tabs-color;
+  &:hover {
+    background-color: #fff;
+  }
 }
