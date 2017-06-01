@@ -30,7 +30,8 @@ module.exports = {
     },
     devServer: {
         compress: true,
-        stats: "errors-only"
+        stats: "errors-only",
+        open: true
     },
     plugins: [
         new HtmlWebpackPlugin({
