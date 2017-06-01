@@ -16,10 +16,10 @@
       {"actions": ""}
     ],
     [
-      {"incoming date": "07/15/2015"},
+      {"incoming date": "07/30/2015"},
       {"incoming number": "01-01/6"},
       {"external doc. index": "01-01"},
-      {"external doc. date": "07/15/2015"},
+      {"external doc. date": "07/15/2016"},
       {"type": "Letter"},
       {"theme": "Whatever"},
       {"sent from": "Organization 1"},
@@ -33,13 +33,13 @@
       {"incoming date": "07/15/2015"},
       {"incoming number": "01-01/6"},
       {"external doc. index": "01-01"},
-      {"external doc. date": "07/15/2015"},
+      {"external doc. date": "08/15/2015"},
       {"type": "Letter"},
       {"theme": "Whatever"},
       {"sent from": "Organization 2"},
       {"sent to": "EPAM"},
       {"executor": "Ivanov Ivan"},
-      {"execution date": "07/15/2015"},
+      {"execution date": "07/15/2014"},
       {"execution mark": "Cancelled"},
       {"actions": ""}
     ]

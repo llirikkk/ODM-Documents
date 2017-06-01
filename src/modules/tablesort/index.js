@@ -11,7 +11,6 @@ export default function initSort(...tableIDs) {
 
         // Current heading
         let target;
-        // let target = tr.cells[0];
 
         // Direction of sort
         let reverse = -1;
@@ -35,8 +34,8 @@ export default function initSort(...tableIDs) {
 
             const index = target.cellIndex;
 
-            // Stable sort of table rows.
-            rowArray.sort(function (a, b) {
+            // Sort by Alphabet
+            function sortByAlph(a, b) {
                 if (a.cells[index].textContent > b.cells[index].textContent) {
                     return reverse;
                 }
@@ -45,7 +44,28 @@ export default function initSort(...tableIDs) {
                 }
                 // To provide stable sort: if elements are equal we keep them in the original order
                 return a.rowIndex - b.rowIndex;
-            });
+            }
+
+            // Sort by Date
+            function sortByDate(a, b) {
+                const aDate = new Date(a.cells[index].innerText);
+                const bDate = new Date(b.cells[index].innerText);
+                if (aDate > bDate) {
+                    return reverse;
+                }
+                if (aDate < bDate) {
+                    return -reverse;
+                }
+                // To provide stable sort: if elements are equal we keep them in the original order
+                return a.rowIndex - b.rowIndex;
+            }
+            // Stable sort of table rows.
+            if (target.textContent.toLowerCase().indexOf("date") !== -1) {
+                rowArray.sort(sortByDate);
+            } else {
+                rowArray.sort(sortByAlph);
+            }
+
             for (let i = 0, len = rowArray.length; i < len; i++) {
                 tBody.appendChild(rowArray[i]);
             }
