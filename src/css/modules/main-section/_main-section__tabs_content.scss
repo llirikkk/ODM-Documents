@@ -116,8 +116,7 @@ $mark-colors: (
     left: 15px;
   }
   &:before {
-    content: "\f107";
-    font-family: FontAwesome;
+    @include fontAwesome('\f107');
     position: absolute;
     right: 0;
     bottom: 12%;

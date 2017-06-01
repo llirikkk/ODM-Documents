@@ -31,7 +31,7 @@ $tab-links: (
       text-align: center;
     }
     &:before {
-      font-family: FontAwesome;
+      @include fontAwesome();
       padding-right: 13px;
       @include media(tables_to_cards) {
         display: none;

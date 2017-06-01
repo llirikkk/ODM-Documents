@@ -36,3 +36,11 @@ $breakpoints: (
   }
 }
 
+//noinspection CssNoGenericFontName
+@mixin fontAwesome($icon: "") {
+  font-family: FontAwesome;
+  @if $icon != "" {
+    content: $icon;
+  }
+}
+

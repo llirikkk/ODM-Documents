@@ -10,7 +10,7 @@
 }
 /*noinspection CssNoGenericFontName*/
 .section-search__buttons {
-  font-family: FontAwesome;
+  @include fontAwesome();
   position: absolute;
   top: 8px;
   right: 6px;

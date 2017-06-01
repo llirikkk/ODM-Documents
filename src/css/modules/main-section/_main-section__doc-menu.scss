@@ -27,8 +27,7 @@
         }
       }
       &:after {
-        font-family: FontAwesome;
-        content: '\f0d7';
+        @include fontAwesome('\f0d7');
         @include media(change_doc-menu) {
           font-size: 14px;
           margin-right: 7px;
@@ -48,8 +47,7 @@
 .document-menu__attach-doc {
   background-color: #ecc134;
   &:before {
-    font-family: FontAwesome;
-    content: '\f0c6';
+    @include fontAwesome('\f0c6');
     font-size: 20px;
   }
   .fa-paperclip {

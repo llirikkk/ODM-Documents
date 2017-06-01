@@ -9,8 +9,7 @@
 }
 /*noinspection CssNoGenericFontName*/
 .menu__item_submenu::after {
-  content: "\f0d7";
-  font-family: FontAwesome;
+  @include fontAwesome('\f0d7');
   position: absolute;
   top: 30%;
   right: 25px;

@@ -56,8 +56,7 @@ $nav-bar_items: (
     width: 100%;
     justify-content: center;
     &:after {
-      content: '\f107';
-      font-family: FontAwesome;
+      @include fontAwesome('\f107');
       font-size: 25px;
       margin-left: 15px;
       transition-duration: 0.3s;
@@ -96,15 +95,13 @@ $nav-bar_items: (
     }
   }
 }
-
-/*noinspection CssNoGenericFontName*/
 .sharepoint-bar__nav-user {
   background-color: #eee;
   height: 29px;
   display: flex;
   align-items: center;
   padding: 0 10px;
-  font-family: FontAwesome;
+  @include fontAwesome();
   a {
     color: #464547;
     @include media(tables_to_cards) {
@@ -118,8 +115,7 @@ $nav-bar_items: (
 .sharepoint-bar__user-profile {
   font-family: $main-font;
   &:after {
-    font-family: FontAwesome;
-    content: '\f0d7'; /*caret-down*/
+    @include fontAwesome('\f0d7');/*caret-down*/
     margin-left: 12px;
   }
 }
@@ -168,7 +164,7 @@ $nav-bar_items: (
   a {
     color: #999;
     &:before {
-      font-family: FontAwesome;
+      @include fontAwesome();
       margin-right: 4px;
     }
     @include media(tables_to_cards) {
@@ -180,8 +176,6 @@ $nav-bar_items: (
     justify-content: center;
   }
 }
-
-/*noinspection CssNoGenericFontName*/
 .nav-bar__item-expand {
-  font-family: FontAwesome;
+  @include fontAwesome();
 }
