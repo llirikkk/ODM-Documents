@@ -11,8 +11,9 @@ export default function tabs() {
             queryString[$1] = $3;
         }
     );
-    let currentTabId = queryString["tab"] || "under-my-approval";
-    let currentTab = document.getElementById(currentTabId) || document.getElementById("under-my-approval");
+    const defaultTabId = document.querySelector(".tab-content div[default='true']").id;
+    let currentTabId = queryString["tab"] || defaultTabId;
+    let currentTab = document.getElementById(currentTabId) || document.getElementById(defaultTabId);
     currentTab.classList.remove("tab-content_hide");
     currentTab.setAttribute("loaded", "true");
     loadTabContent(currentTab.id);
