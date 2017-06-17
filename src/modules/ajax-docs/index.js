@@ -28,7 +28,7 @@ export default function loadTabContent(tabId) {
     }
 
     function getTable(tableName, section) {
-        let xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
         xhr.open("GET", `../json/${tableName}.json`, true);
         xhr.onload = function() {
             if (xhr.status === 200) {
@@ -57,7 +57,7 @@ export default function loadTabContent(tabId) {
         heading.textContent = tableData["heading"];
 
         // Array of documents
-        let docsArray = tableData["documents"];
+        const docsArray = tableData["documents"];
 
         // List of document properties
         let docProps = [];
