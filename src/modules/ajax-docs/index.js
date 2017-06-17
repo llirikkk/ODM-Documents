@@ -35,10 +35,10 @@ export default function loadTabContent(tabId) {
                 const tableData = JSON.parse(xhr.responseText);
 
                 /* AJAX request is asynchronous and because of it we must
-                 * pass tableName to renderHTML() as a parameter, in order to save it
-                 * in a closure of onload-callback*/
-                // setTimeout(renderHTML, 1000 * (Math.floor(Math.random() * 4) + 1), xhrData, tableName, section);
-                renderHTML(tableData, tableName, section);
+                 * pass tableName to renderHTML() as a parameter, taken from a closure of onload-callback*/
+                // Time delay for testing
+                setTimeout(renderHTML, 1000 * (Math.floor(Math.random() * 4) + 1), tableData, tableName, section);
+                // renderHTML(tableData, tableName, section);
             } else {
                 section.innerHTML = `Couldn't load ${tableName}`;
             }
