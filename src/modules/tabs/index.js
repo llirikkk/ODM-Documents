@@ -4,7 +4,7 @@ export default function tabs() {
     const uri = window.location.href;
     let queryString = {};
 
-// Getting currentTabId from uri
+    // Getting currentTabId from uri
     uri.replace(
         new RegExp("([^?=&]+)(=([^&]*))", "g"),
         function ($0, $1, $2, $3) {
@@ -16,12 +16,15 @@ export default function tabs() {
     let currentTab = document.getElementById(currentTabId) || document.getElementById(defaultTabId);
     currentTab.classList.remove("tab-content_hide");
     currentTab.setAttribute("loaded", "true");
+
+    // Loading content of the current tab
     loadTabContent(currentTab.id);
 
+    // Applying style to the active tab link
     let currentTabAnchor = document.querySelector(`a[href="#${currentTab.id}"]`);
     currentTabAnchor.parentNode.classList.add("tab-links__item_active");
 
-// Adding handlers to tab anchors
+    // Adding handlers to tab anchors
     const tabAnchors = document.querySelectorAll(".tab-links a");
     for (let i = 0, len = tabAnchors.length; i < len; i++) {
         tabAnchors[i].addEventListener("click", tabHandler);

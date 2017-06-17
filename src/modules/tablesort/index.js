@@ -13,12 +13,14 @@ export default function initSort(...tableIDs) {
         let target;
 
         // Direction of sort
-        let reverse = -1;
+        let reverse;
 
         tr.addEventListener("click", sortTable, false);
 
         function sortTable(event) {
+            // If we sort for the first time or choose another heading
             if (target != event.target || !target) {
+                // If we've already sorted by heading and now choose another heading
                 if (target) {
                     target.classList.remove("th-sorted", "th-sorted_up");
                 }
@@ -28,10 +30,13 @@ export default function initSort(...tableIDs) {
                 }
                 target.classList.add("th-sorted");
                 reverse = 1;
-            } else {
+            }
+            // If we sort the same heading
+            else {
+
                 target.classList.toggle("th-sorted_up");
             }
-
+            // Index of the cells in a column to be sorted
             const index = target.cellIndex;
 
             // Sort by Alphabet

@@ -19,9 +19,7 @@ export default function loadTabContent(tabId) {
         // Creating a section for each table
         const section = document.createElement("section");
         section.id = `${tableName}__container`;
-
-        // Adding class for proper display on smartphones
-        section.classList.add(`${tableName.slice(-3)}-documents`);
+        
         tab.appendChild(section);
         section.innerHTML = `Loading ${tableName}...`;
 
@@ -34,13 +32,13 @@ export default function loadTabContent(tabId) {
         xhr.open("GET", `../json/${tableName}.json`, true);
         xhr.onload = function() {
             if (xhr.status === 200) {
-                const xhrData = JSON.parse(xhr.responseText);
+                const tableData = JSON.parse(xhr.responseText);
 
                 /* AJAX request is asynchronous and because of it we must
                  * pass tableName to renderHTML() as a parameter, in order to save it
                  * in a closure of onload-callback*/
                 // setTimeout(renderHTML, 1000 * (Math.floor(Math.random() * 4) + 1), xhrData, tableName, section);
-                renderHTML(xhrData, tableName, section);
+                renderHTML(tableData, tableName, section);
             } else {
                 section.innerHTML = `Couldn't load ${tableName}`;
             }
