@@ -27,7 +27,7 @@ export default function loadTabContent(tabId) {
 
     function getTable(tableName, section) {
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", `../json/${tableName}.json`, true);
+        xhr.open("GET", `../json/${tableName}.json`);
         xhr.onload = function() {
             if (xhr.status === 200) {
                 const tableData = JSON.parse(xhr.responseText);
@@ -71,7 +71,7 @@ export default function loadTabContent(tabId) {
         for (let i = 0, len = firstDoc.length; i < len; i++) {
             const docProp = Object.keys(firstDoc[i])[0].toLowerCase();
             docProps[i] = docProp;
-            let th = document.createElement("th");
+            const th = document.createElement("th");
             th.textContent = docProp;
             tHeadTr.appendChild(th);
 
@@ -83,26 +83,26 @@ export default function loadTabContent(tabId) {
 
         // Forming tBody
         for (let i = 0, len = docsArray.length; i < len; i++) {
-            let tr = document.createElement("tr");
+            const tr = document.createElement("tr");
 
             for (let j = 0, len = docsArray[i].length; j < len; j++) {
                 const td = document.createElement("td");
 
                 // Adding headings, visible only at the breakpoint, when tables are turned to cards
-                let heading = document.createElement("span");
-                heading.classList.add("doc-heading");
-                heading.textContent = docProps[j];
-                td.appendChild(heading);
+                const cardViewHeading = document.createElement("span");
+                cardViewHeading.classList.add("doc-heading");
+                cardViewHeading.textContent = docProps[j];
+                td.appendChild(cardViewHeading);
 
                 // Receiving document properties
                 const docProp = docsArray[i][j][docProps[j]];
 
                 // Applying styles to table marks
                 if (j === markIndex) {
-                    let span = document.createElement("span");
-                    span.classList.add("table-mark",`table-mark_${docProp.toLowerCase()}`);
-                    span.innerHTML = docProp;
-                    td.appendChild(span);
+                    const tableMarkSpan = document.createElement("span");
+                    tableMarkSpan.classList.add("table-mark",`table-mark_${docProp.toLowerCase()}`);
+                    tableMarkSpan.innerHTML = docProp;
+                    td.appendChild(tableMarkSpan);
                 } else {
                     td.innerHTML += docProp;
                 }
