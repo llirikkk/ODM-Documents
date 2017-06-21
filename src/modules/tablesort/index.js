@@ -9,8 +9,7 @@ export default function initSort(...tableIDs) {
         // Table headings
         const tr = table.tHead.rows[0];
 
-        // Current heading
-        let target;
+        let currentHeading;
 
         let sortDirection;
 
@@ -18,25 +17,25 @@ export default function initSort(...tableIDs) {
 
         function sortTable(event) {
             // If we sort for the first time or choose another heading
-            if (target != event.target || !target) {
+            if (currentHeading != event.target || !currentHeading) {
                 // If we've already sorted by heading and now choose another heading
-                if (target) {
-                    target.classList.remove("th-sorted", "th-sorted_up");
+                if (currentHeading) {
+                    currentHeading.classList.remove("th-sorted", "th-sorted_up");
                 }
-                target = event.target;
-                while (target.tagName != "TH") {
-                    target = target.parentNode;
+                currentHeading = event.target;
+                while (currentHeading.tagName != "TH") {
+                    currentHeading = currentHeading.parentNode;
                 }
-                target.classList.add("th-sorted");
+                currentHeading.classList.add("th-sorted");
                 sortDirection = 1;
             }
             // If we sort the same heading
             else {
 
-                target.classList.toggle("th-sorted_up");
+                currentHeading.classList.toggle("th-sorted_up");
             }
             // Index of the cells in a column to be sorted
-            const index = target.cellIndex;
+            const index = currentHeading.cellIndex;
 
             // Sort by Alphabet
             function sortByAlph(a, b) {
@@ -64,7 +63,7 @@ export default function initSort(...tableIDs) {
                 return a.rowIndex - b.rowIndex;
             }
             // Stable sort of table rows.
-            if (target.textContent.toLowerCase().indexOf("date") !== -1) {
+            if (currentHeading.textContent.toLowerCase().indexOf("date") !== -1) {
                 rowArray.sort(sortByDate);
             } else {
                 rowArray.sort(sortByAlph);
