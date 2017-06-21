@@ -11,20 +11,18 @@ export default function loadTabContent(tabId) {
     // List of tables to be loaded
     const tabTables = [`${tabId}-inc`, `${tabId}-out`, `${tabId}-fax`];
 
-    // Array of loaded tables
-    let tableName;
     for (let i = 0, len = tabTables.length; i < len; i++) {
-        tableName = tabTables[i];
+        let tableName = tabTables[i];
 
         // Creating a section for each table
-        const section = document.createElement("section");
-        section.id = `${tableName}__container`;
+        const tableSection = document.createElement("section");
+        tableSection.id = `${tableName}__container`;
         
-        tab.appendChild(section);
-        section.innerHTML = `Loading ${tableName}...`;
+        tab.appendChild(tableSection);
+        tableSection.innerHTML = `Loading ${tableName}...`;
 
         // Making AJAX request for each table and add table to appropriate section
-        getTable(tableName, section);
+        getTable(tableName, tableSection);
     }
 
     function getTable(tableName, section) {
@@ -46,7 +44,7 @@ export default function loadTabContent(tabId) {
         xhr.send();
     }
 
-    function renderHTML(tableData, tableName, section) {
+    function renderHTML(tableData, tableName, tableSection) {
         const table = document.createElement("table");
         const tHead = document.createElement("thead");
         const tBody = document.createElement("tbody");
@@ -120,9 +118,9 @@ export default function loadTabContent(tabId) {
         table.appendChild(tBody);
 
         // Adding heading to the table
-        section.innerHTML = "";
-        section.appendChild(heading);
-        section.appendChild(table);
+        tableSection.innerHTML = "";
+        tableSection.appendChild(heading);
+        tableSection.appendChild(table);
 
         // Init sort
         initSort(table.id);

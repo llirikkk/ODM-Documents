@@ -17,7 +17,6 @@ export default function tabs() {
     currentTab.classList.remove("tab-content_hide");
     currentTab.setAttribute("loaded", "true");
 
-    // Loading content of the current tab
     loadTabContent(currentTab.id);
 
     // Applying style to the active tab link

@@ -35,24 +35,22 @@ export default function initSort(...tableIDs) {
                 currentHeading.classList.toggle("th-sorted_up");
             }
             // Index of the cells in a column to be sorted
-            const index = currentHeading.cellIndex;
-
-            // Sort by Alphabet
-            function sortByAlph(a, b) {
-                if (a.cells[index].textContent > b.cells[index].textContent) {
+            const sortIndex = currentHeading.cellIndex;
+            
+            function sortByAlphabet(a, b) {
+                if (a.cells[sortIndex].textContent > b.cells[sortIndex].textContent) {
                     return sortDirection;
                 }
-                if (a.cells[index].textContent < b.cells[index].textContent) {
+                if (a.cells[sortIndex].textContent < b.cells[sortIndex].textContent) {
                     return -sortDirection;
                 }
                 // To provide stable sort: if elements are equal we keep them in the original order
                 return a.rowIndex - b.rowIndex;
             }
 
-            // Sort by Date
             function sortByDate(a, b) {
-                const aDate = new Date(a.cells[index].innerText);
-                const bDate = new Date(b.cells[index].innerText);
+                const aDate = new Date(a.cells[sortIndex].innerText);
+                const bDate = new Date(b.cells[sortIndex].innerText);
                 if (aDate > bDate) {
                     return sortDirection;
                 }
@@ -66,7 +64,7 @@ export default function initSort(...tableIDs) {
             if (currentHeading.textContent.toLowerCase().indexOf("date") !== -1) {
                 rowArray.sort(sortByDate);
             } else {
-                rowArray.sort(sortByAlph);
+                rowArray.sort(sortByAlphabet);
             }
 
             for (let i = 0, len = rowArray.length; i < len; i++) {
