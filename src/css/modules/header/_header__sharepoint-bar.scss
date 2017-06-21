@@ -101,7 +101,6 @@ $nav-bar_items: (
   display: flex;
   align-items: center;
   padding: 0 10px;
-  @include fontAwesome();
   a {
     color: #464547;
     @include media(tables_to_cards) {
@@ -184,7 +183,4 @@ $nav-bar_items: (
     display: flex;
     justify-content: center;
   }
-}
-.nav-bar__item-expand {
-  @include fontAwesome();
 }
