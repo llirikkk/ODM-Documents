@@ -12,8 +12,7 @@ export default function initSort(...tableIDs) {
         // Current heading
         let target;
 
-        // Direction of sort
-        let reverse;
+        let sortDirection;
 
         tr.addEventListener("click", sortTable, false);
 
@@ -29,7 +28,7 @@ export default function initSort(...tableIDs) {
                     target = target.parentNode;
                 }
                 target.classList.add("th-sorted");
-                reverse = 1;
+                sortDirection = 1;
             }
             // If we sort the same heading
             else {
@@ -42,10 +41,10 @@ export default function initSort(...tableIDs) {
             // Sort by Alphabet
             function sortByAlph(a, b) {
                 if (a.cells[index].textContent > b.cells[index].textContent) {
-                    return reverse;
+                    return sortDirection;
                 }
                 if (a.cells[index].textContent < b.cells[index].textContent) {
-                    return -reverse;
+                    return -sortDirection;
                 }
                 // To provide stable sort: if elements are equal we keep them in the original order
                 return a.rowIndex - b.rowIndex;
@@ -56,10 +55,10 @@ export default function initSort(...tableIDs) {
                 const aDate = new Date(a.cells[index].innerText);
                 const bDate = new Date(b.cells[index].innerText);
                 if (aDate > bDate) {
-                    return reverse;
+                    return sortDirection;
                 }
                 if (aDate < bDate) {
-                    return -reverse;
+                    return -sortDirection;
                 }
                 // To provide stable sort: if elements are equal we keep them in the original order
                 return a.rowIndex - b.rowIndex;
@@ -75,7 +74,7 @@ export default function initSort(...tableIDs) {
                 tBody.appendChild(rowArray[i]);
             }
             table.appendChild(tBody);
-            reverse = -reverse;
+            sortDirection = -sortDirection;
         }
     }
 }
