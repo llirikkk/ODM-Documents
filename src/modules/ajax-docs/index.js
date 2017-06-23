@@ -25,7 +25,7 @@ export default function loadTabContent(tabId) {
         getTable(tableName, tableSection);
     }
 
-    function getTable(tableName, section) {
+    function getTable(tableName, tableSection) {
         const xhr = new XMLHttpRequest();
         xhr.open("GET", `../json/${tableName}.json`);
         xhr.onload = function() {
@@ -35,10 +35,10 @@ export default function loadTabContent(tabId) {
                 /* AJAX request is asynchronous and because of it we must
                  * pass tableName to renderHTML() as a parameter, taken from a closure of onload-callback*/
                 // Time delay for testing
-                setTimeout(renderHTML, 1000 * (Math.floor(Math.random() * 4) + 1), tableData, tableName, section);
+                setTimeout(renderHTML, 1000 * (Math.floor(Math.random() * 4) + 1), tableData, tableName, tableSection);
                 // renderHTML(tableData, tableName, section);
             } else {
-                section.innerHTML = `Couldn't load ${tableName}`;
+                tableSection.innerHTML = `Couldn't load ${tableName}`;
             }
         };
         xhr.send();
